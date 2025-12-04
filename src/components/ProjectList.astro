@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+const allProjects = await getCollection("projects");
+---
+
+{
+  allProjects.map((project) => (
+    <a href={`/projects/${project.id}/`}>
+      {/* conditional rendering:
+      "if project.data.thumbnail exists, then create this <Image> element"
+      */}
+      {project.data.thumbnail && (
+        <Image class="project-img" src={project.data.thumbnail} alt="" />
+      )}
+      <h2>{project.data.title}</h2>
+      <p>{project.data.projectType}</p>
+    </a>
+  ))
+}
+
+<style>
+  .project-img {
+    max-width: 300px;
+  }
+</style>

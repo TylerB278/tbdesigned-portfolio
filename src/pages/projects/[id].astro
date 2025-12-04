@@ -1,0 +1,26 @@
+---
+import Container from "@components/Container.astro";
+import Layout from "@layouts/Layout.astro";
+
+import { type CollectionEntry, getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("projects");
+  return posts.map((project) => ({
+    params: { id: project.id },
+    props: project,
+  }));
+}
+
+const post = Astro.props;
+// This gets the main content from the markdown file and 
+// turns it into an Astro component: <Content />
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title}>
+  <Container>
+    <h1>{post.data.title}</h1>
+    <Content />
+  </Container>
+</Layout>
