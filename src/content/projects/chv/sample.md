@@ -1,6 +1,6 @@
 ---
-title: Branding
-projectType: Print Design
+title: Contender Hudson Valley
+projectType: Graphic Design
 class: peter
 ---
 

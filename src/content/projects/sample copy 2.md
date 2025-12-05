@@ -1,6 +1,6 @@
 ---
-title: Project 1
-projectType: Web Development
+title: Contender Hudson Valley
+projectType: Graphic Design
 ---
 
 lorem ipsum dolor sit amet, consectetur adipiscing elit.

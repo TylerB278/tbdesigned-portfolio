@@ -19,7 +19,8 @@ const allProjects = await getCollection("projects");
 
 {
   allProjects.map((project) => (
-    <div class={`projectCard ${project.data.class}`}>
+    <div class={`projectCard ${project.data.class}`}></div>
+    <div class="bottomCard">
       <a href={`/projects/${project.id}/`}>
         {/* conditional rendering:
         "if project.data.thumbnail exists, then create this <Image> element"
@@ -39,27 +40,40 @@ const allProjects = await getCollection("projects");
     display: flex;
     flex-flow: wrap;
     align-content: flex-end;
+    overflow: hidden;
     width: 400px;
     height: 300px;
     margin: 20px;
+    margin-bottom: 0px;
     background-color: rgb(255, 230, 0);
   }
 
-  .projectCard h2{
+  .projectCard:hover{
+    border: 5px solid rgba(255, 187, 0);
+  }
+
+  .bottomCard{
+    margin-top: -10px;
+    width: 400px;
+  }
+
+  .bottomCard h2{
     background-color: rgba(255, 187, 0);
     width: 400px;
     padding-left: 20px;
     padding-top: 5px;
   }
-  .projectCard a{ text-decoration: none; }
-  .projectCard p{
+  .bottomCard a{ text-decoration: none; }
+  .bottomCard p{
     background-color: rgba(255, 187, 0);
     color: black;
     width: 400px;
     padding-left: 20px;
     padding-bottom: 10px;
+    margin-top: -8px;
   }
 
+  .bottomCard h2,a:hover{  }
   .peter{
     background-image: url(src/content/projects/chv/peter.png);
   }
