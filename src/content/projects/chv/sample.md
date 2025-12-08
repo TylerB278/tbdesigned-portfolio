@@ -2,6 +2,7 @@
 title: Contender Hudson Valley
 projectType: Graphic Design
 class: peter
+content: "this is content for the CHV section"
 ---
 
 lorem ipsum dolor sit amet, consectetur adipiscing elit.

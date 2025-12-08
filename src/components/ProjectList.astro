@@ -19,7 +19,7 @@ const allProjects = await getCollection("projects");
 
 {
   allProjects.map((project) => (
-    <div class={`projectCard ${project.data.class}`}></div>
+    <div class={`projectCard ${project.data.class}`} style={`--cont: ${project.data.content}`}></div>
     <div class="bottomCard">
       <a href={`/projects/${project.id}/`}>
         {/* conditional rendering:
@@ -41,14 +41,14 @@ const allProjects = await getCollection("projects");
     flex-flow: wrap;
     justify-content: flex-start;
     align-items: center;
-    overflow: hidden;
+    overflow: visible;
     width: 400px;
     height: 250px;
     margin: 20px;
     margin-bottom: 0px;
     background-color: rgb(255, 230, 0);
     border: 0px solid rgba(255, 187, 0);
-    transition: all 0.1s;
+    transition: all 0.2s;
   }
 
   .projectCard:hover{
@@ -57,12 +57,25 @@ const allProjects = await getCollection("projects");
   }
 
   .projectCard:after{
-    content: "test";
+    padding: 20px;
     background-color: rgba(255, 187, 0);
-    position: absolute;
+    position: relative;
+    top: 0px;
     width: 500px;
-    height: 250px;
-    left: 420px;
+    height: 323.5px;
+    left: 0px;
+    transition: all 0.2s;
+    overflow: hidden;
+    z-index: -1
+
+  }
+  .projectCard:hover:after{ 
+    background-color: rgba(255, 187, 0);
+    position: relative;
+    top: -10px;
+    width: 500px;
+    height: 323.5px;
+    left: 390px;
 
   }
 
@@ -95,5 +108,5 @@ const allProjects = await getCollection("projects");
     background-repeat: none;
     background-position: center;
     background-size: 100%;
-  }
+  } .peter:after{ content: "this is content for the CHV section" }
 </style>

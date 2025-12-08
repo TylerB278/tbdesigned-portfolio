@@ -1,6 +1,8 @@
 ---
-title: Contender Hudson Valley
+title: Athletic & Wellness Center
 projectType: Graphic Design
+class: awc
+content: "this is content for the awc section"
 ---
 
 lorem ipsum dolor sit amet, consectetur adipiscing elit.
