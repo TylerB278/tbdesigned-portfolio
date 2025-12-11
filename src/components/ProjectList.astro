@@ -17,29 +17,43 @@ const allProjects = await getCollection("projects");
 
 ---
 
-{
-  allProjects.map((project) => (
-    <div class={`projectCard ${project.data.class}`}><a href={`/projects/${project.id}/`} class="click"></a></div>
-    <div class="bottomCard">
-      <a href={`/projects/${project.id}/`}>
-        {/* conditional rendering:
-        "if project.data.thumbnail exists, then create this <Image> element"
-        */}
-        {/* {project.data.thumbnail && (
-          <Image class="project-img" src={project.data.thumbnail} alt="" />
-        )} */}
-        <h2>{project.data.title}</h2>
-        <p>{project.data.projectType}</p>
-      </a>
-    </div>
-  ))
-}
+<div class="projectContain">
+  {
+    allProjects.map((project) => (
+      <div class="fullCard">
+        <div class={`projectCard ${project.data.class}`}><a href={`/projects/${project.id}/`} class="click"></a></div>
+        <div class="bottomCard">
+          <a href={`/projects/${project.id}/`}>
+            {/* conditional rendering:
+            "if project.data.thumbnail exists, then create this <Image> element"
+            */}
+            {/* {project.data.thumbnail && (
+              <Image class="project-img" src={project.data.thumbnail} alt="" />
+            )} */}
+            <h2>{project.data.title}</h2>
+            <p>{project.data.projectType}</p>
+          </a>
+        </div>
+      </div>
+    ))
+  }
+</div>
 
 <style>
+  .projectContain{
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+  }
+
+  .fullCard{
+    flex-direction: column;
+  }
+
   .projectCard{
     display: flex;
-    flex-flow: wrap;
-    justify-content: flex-start;
     align-items: center;
     overflow: visible;
     width: 400px;
@@ -56,7 +70,7 @@ const allProjects = await getCollection("projects");
     background-size: 105.5%;
   }
 
-  .projectCard:after{
+  /* .projectCard:after{
     padding: 20px;
     background-color: rgba(255, 187, 0);
     position: relative;
@@ -76,13 +90,13 @@ const allProjects = await getCollection("projects");
     height: 323.5px;
     left: 490px;
 
-  }
+  } */
 
   .click{
     position: absolute;
     left: 20px;
-    width: 400px;
-    height: 250px;
+    width: 0px;
+    height: 0px;
   }
 
   .bottomCard{
@@ -115,28 +129,28 @@ const allProjects = await getCollection("projects");
     background-repeat: none;
     background-position: center;
     background-size: 100%;
-  } .peter:after{ content: "this is content for the CHV section" }
+  }
 
   .chv{
     background-image: url(src/content/projects/chv/thumbnail.png);
     background-repeat: none;
     background-position: center;
     background-size: 100%;
-  } .chv:after{ content: "this is content for the CHV section" }
+  }
 
   .red{
     background-image: url(src/content/projects/redmaster/thumbnail.png);
     background-repeat: none;
     background-position: center;
     background-size: 100%;
-  } .red:after{ content: "this is content for the Redmaster section" }
+  }
 
   .awc{
     background-image: url(src/content/projects/awc/thumbnail.png);
     background-repeat: none;
     background-position: center;
     background-size: 100%;
-  } .awc:after{ content: "this is content for the AWC section" }
+  }
 
 
 </style>
