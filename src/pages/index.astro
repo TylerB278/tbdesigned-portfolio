@@ -31,8 +31,7 @@ import PersonalWork from "@components/PersonalWork.astro";
   <h2 class="sectH">Projects</h2>
   <ProjectList />
   
-  <h2 class="sectH">Personal Work</h2>
-  <PersonalWork />
+  <PersonalWork></PersonalWork>
     
   </Container>
   <div class="gap"></div>
@@ -72,9 +71,10 @@ nav{
 .heroSect{
   /* position: sticky;
   top: 10%; */
-  width: 100%;
+  /* width: 100%; */
   height: 100vh;
   z-index: -100;
+  overflow: hidden;
 }
 
 .title{
@@ -100,6 +100,8 @@ nav{
   text-underline-offset: 10px;
 }
 
+.pers{ font-size: 60pt; width: 600px;}
+
 @keyframes popIn {
   from { transform: scale(0%); }
   to { transform: scale(100%); }
@@ -121,6 +123,7 @@ nav{
   animation: LtR 2s;
 }
 .th2{ 
+  width: 100vw;
   z-index: -10; 
   font-size: 8vw; 
   margin-top: -60px; 

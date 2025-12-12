@@ -6,7 +6,11 @@ import { Image } from "astro:assets";
 ---
 
   <div class="proj">
-    <div class="projectCard"><a href="/projects/markdown" class="click"></a></div>
+    <div class="projectCard">
+      <a href="/projects/markdown" class="click">
+        <h2 class="sectH">Personal Work</h2>
+      </a>
+    </div>
   </div>
   <!-- <div class="bottomCard">
     <a href="/projects/markdown">
@@ -30,7 +34,7 @@ import { Image } from "astro:assets";
     overflow: visible;
     width: 700px;
     height: 500px;
-    margin: 20px;
+    margin: 0 auto;
     margin-bottom: 0px;
     background-image: url(src/content/projects/personal/thumbnail.png);
     background-size: 100%;
@@ -44,11 +48,24 @@ import { Image } from "astro:assets";
     background-size: 105.5%;
   }
 
+  .sectH{
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  color: white;
+  font-size: 60pt;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  }
+
   .click{
-    position: absolute;
-    left: 20px;
-    width: 400px;
-    height: 250px;
+    align-content: center;
+    width: 700px;
+    height: 480px;
+    text-decoration: none;
   }
 
   .bottomCard{

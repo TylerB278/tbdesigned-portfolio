@@ -5,7 +5,4 @@ class: awc
 content: "this is content for the awc section"
 ---
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
-
-![thumbnail for page](thumbnail.png "thumbnail")
+A series of works I made for my internship with the Intramural Branch of the New Paltz Athletic & Wellness Center, all works were made with the restrictions imposed on my by following the New Paltz Athletics department style guide.
