@@ -36,6 +36,7 @@ import PersonalWork from "@components/PersonalWork.astro";
   </Container>
   <div class="gap"></div>
 </Layout>
+<div class="footer">© Tyler Boggi 2026</div>
 
 <style>
 
@@ -119,14 +120,14 @@ nav{
   font-size: 10vw; 
   margin-left: 5%;
   padding-top: 60px; 
-  margin-bottom: -60px; 
+  margin-bottom: -30px; 
   animation: LtR 2s;
 }
 .th2{ 
   width: 100vw;
   z-index: -10; 
   font-size: 8vw; 
-  margin-top: -60px; 
+  margin-top: -30px; 
   margin-left: 25%; 
   animation: RtL 2s;
 }
@@ -140,5 +141,18 @@ nav{
 }
 
 .gap{height: 200px;}
+
+.footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 20px;
+  padding: 10px;
+  padding-right: 50px;
+  /* border-top: 10px solid rgb(176, 85, 0); */
+  background-color: rgba(255, 187, 0);
+  color: black;
+  height: 60px;
+}
 
 </style>

@@ -36,7 +36,7 @@ import { Image } from "astro:assets";
     height: 500px;
     margin: 0 auto;
     margin-bottom: 0px;
-    background-image: url(src/content/projects/personal/thumbnail.png);
+    background-image: url(src/content/personal/thumbnail.png);
     background-size: 100%;
     border: 10px solid rgba(255, 187, 0);
     border-radius: 30px;
@@ -63,6 +63,7 @@ import { Image } from "astro:assets";
 
   .click{
     align-content: center;
+    justify-content: center;
     width: 700px;
     height: 480px;
     text-decoration: none;
@@ -93,5 +94,18 @@ import { Image } from "astro:assets";
     margin-top: -8px;
   }
 
+  @media(max-width: 900px){
+    .projectCard, .click{
+      width: 100vw;
+      height: 60vw;
+    }
+    .click{
+      height: 57vw;
+    }
+    .sectH{
+      width: fit-content;
+      font-size: 10vw;
+    }
+  }
 
 </style>
