@@ -1,16 +1,16 @@
 ---
 const { folder } = Astro.props;
+const { w } = Astro.props;
 ---
 
-<div class="image-component" style=`background-image: url(src/content/${folder}/thumbnail.png)`>
-</div>
+<img class="image-component" style=`width: ${w};` src=`/assets/${folder}/thumbnail.png`>
+</img>
 
 <style>
   .image-component {
-    border: 2px solid var(--color-accent);
-    background-size: contain;
-    width: 10vw;
-    border-radius: 8px;
-    max-width: 400px;
-  }
+    transition: all 0.2s;
+    margin: 20px;
+    border-radius: 0px;
+    /* max-width: 400px; */
+  } .image-component:hover{ border-radius: 10%; }
 </style>
