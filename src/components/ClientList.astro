@@ -54,25 +54,24 @@ const allProjects = await getCollection("clients");
   .projectCard:hover{
     border: 10px solid rgba(255, 187, 0);
     background-size: 105.5%;
+    rotate: -5deg;
   }
 
   @media(min-width: 800px){
     .projectCard:after{
-    padding: 20px;
-    color: black;
-    background-color: rgba(255, 187, 0);
-    position: relative;
-    top: 0px;
-    width: 500px;
-    height: 100%;
-    left: 0px;
-    transition: all 0.2s;
-    z-index: -1;
-    }
-    .projectCard:hover:after{ 
+      content: "";
+      background-color: rgba(255, 187, 0);
       position: relative;
       top: 0px;
-      left: 390px;
+      width: 500px;
+      height: 100%;
+      left: 0px;
+      transition: all 0.2s;
+      z-index: -100;
+    }
+    .projectCard:hover:after{ 
+      scale: 110%;
+      rotate: 10deg;
     }
   }
 
@@ -91,15 +90,14 @@ const allProjects = await getCollection("clients");
   }
 
   .bottomCard h2{
-    background-color: rgba(255, 187, 0);
+    color: yellow;
     width: 400px;
     padding-left: 20px;
     padding-top: 5px;
   }
   .bottomCard a{ text-decoration: none; }
   .bottomCard p{
-    background-color: rgba(255, 187, 0);
-    color: black;
+    color: yellow;
     width: 400px;
     padding-left: 20px;
     padding-bottom: 10px;
@@ -127,14 +125,14 @@ const allProjects = await getCollection("clients");
     background-repeat: none;
     background-position: center;
     background-size: 100%;
-  } .red:after{ content: "I have worked with the streamer Redmaster on multiple occasions to create more of a brand identity for him and help him promote himself to new audiences" }
+  } .red:after{}
 
   .awc{
     background-image: url(/assets/awc/thumbnail.png);
     background-repeat: none;
     background-position: center;
     background-size: 100%;
-  } .awc:after{ content: "A series of works I made for my internship with the New Paltz Athletic & Wellness Center, all works were made with the restrictions imposed on my by following the New Paltz Athletics department style guide." }
+  } .awc:after{}
 
   @media(max-width:800px){ 
     .projectCard:after {content: none;} 
