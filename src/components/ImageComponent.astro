@@ -5,17 +5,16 @@ const { j } = Astro.props;
 
 ---
 
-<img class="image-component" style=`width: ${w}; --just = ${j};` src=`/assets/${folder}/thumbnail.png`>
+<img class="image-component" style=`width: ${w}; --just = ${j};` src=`/assets/${folder}`>
 </img>
 
 <style>
   .image-component {
     display: flex;
     flex-flow: row wrap;
-    transition: all 0.2s;
+    /* transition: all 0.2s; */
     padding: 10px;
     margin: 0 auto;
-    border-radius: 0px;
     /* max-width: 400px; */
-  } .image-component:hover{ border-radius: 10%; }
+  } .image-component:hover{ border: 5px solid yellow;}
 </style>
