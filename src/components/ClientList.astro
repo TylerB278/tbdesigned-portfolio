@@ -55,23 +55,23 @@ const allProjects = await getCollection("clients");
     border: 10px solid rgba(255, 187, 0);
     background-size: 105.5%;
     rotate: -5deg;
+
   }
 
   @media(min-width: 800px){
-    .projectCard:after{
+    .projectCard::before{
       content: "";
       background-color: rgba(255, 187, 0);
       position: relative;
       top: 0px;
       width: 500px;
       height: 100%;
-      left: 0px;
-      transition: all 0.2s;
-      z-index: -100;
+      left: 0px;   
+      z-index: -1;
     }
-    .projectCard:hover:after{ 
+    .projectCard:hover::before{ 
       scale: 110%;
-      rotate: 10deg;
+      rotate: 15deg;
     }
   }
 
