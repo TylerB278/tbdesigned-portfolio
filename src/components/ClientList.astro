@@ -37,6 +37,7 @@ const allProjects = await getCollection("clients");
 
 <style>
   .projectCard{
+    /* position: relative; */
     display: flex;
     flex-flow: wrap;
     justify-content: flex-start;
@@ -58,21 +59,22 @@ const allProjects = await getCollection("clients");
 
   }
 
+  .projectCard::before{
+  content: "";
+  background-color: rgba(255, 187, 0);
+  top: 0px;
+  width: 500px;
+  height: 100%;
+  left: 0px;   
+  z-index: -1;
+}
+.projectCard:hover::before{ 
+  z-index: -1;
+  scale: 110%;
+  rotate: 15deg;
+}
+
   @media(min-width: 800px){
-    .projectCard::before{
-      content: "";
-      background-color: rgba(255, 187, 0);
-      position: relative;
-      top: 0px;
-      width: 500px;
-      height: 100%;
-      left: 0px;   
-      z-index: -1;
-    }
-    .projectCard:hover::before{ 
-      scale: 110%;
-      rotate: 15deg;
-    }
   }
 
   .click{
