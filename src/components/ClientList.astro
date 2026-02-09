@@ -16,78 +16,119 @@ const allProjects = await getCollection("clients");
 
 
 ---
-
-{
-  allProjects.map((project) => (
-    <div class={`projectCard ${project.data.class}`}><a href={`/clients/${project.id}/`} class="click"></a></div>
-    <div class="bottomCard">
-      <a href={`/clients/${project.id}/`}>
-        {/* conditional rendering:
-        "if project.data.thumbnail exists, then create this <Image> element"
-        */}
-        {/* {project.data.thumbnail && (
-          <Image class="project-img" src={project.data.thumbnail} alt="" />
-        )} */}
-        <h2>{project.data.title}</h2>
-        <p>{project.data.projectType}</p>
-      </a>
-    </div>
-  ))
-}
+<div class="cardsLayout">
+  {
+    allProjects.map((project) => (
+      <div class="projectCardWrap">
+        <a href={`/clients/${project.id}/`} class="click"></a>
+        <div class={`projectCard backgroundCard`} style={`background-image: url(${project?.data?.thumbnail?.src})`}></div>
+        <div class="cardOverlay"></div>  
+        <div class="bottomCard">
+          <a href={`/clients/${project.id}/`}>
+            {/* conditional rendering:
+            "if project.data.thumbnail exists, then create this <Image> element"
+            */}
+            {/* {project.data.thumbnail && (
+              <Image class="project-img" src={project.data.thumbnail} alt="" />
+            )} */}
+            <h2>{project.data.title}</h2>
+            <p>{project.data.projectType}</p>
+          </a>
+        </div>
+      </div>
+    ))
+  }
+</div>
 
 <style>
   .projectCard{
-    /* position: relative; */
+    position: relative;
     display: flex;
     flex-flow: wrap;
     justify-content: flex-start;
     align-items: center;
     overflow: visible;
-    width: 400px;
-    height: 250px;
-    margin: 20px;
+    width: 500px;
+    height: 300px;
+    margin: 10px;
     margin-bottom: 0px;
     background-color: rgb(255, 230, 0);
     border: 0px solid rgba(255, 187, 0);
     transition: all 0.2s;
   }
 
-  .projectCard:hover{
+  /* .projectCard:hover{
     border: 10px solid rgba(255, 187, 0);
     background-size: 105.5%;
     rotate: -5deg;
+  } */
 
+  .projectCardWrap{
+    position: relative;
+    /* border: 5px solid white; */
+    width: fit-content;
   }
 
-  .projectCard::before{
+  .cardOverlay{
+    position: absolute;
+    background-color: rgba(255, 187, 0);
+    top: 0px;
+    width: 450px;
+    height: 300px;
+    left: 10px;
+    top: 10px;
+    transition: all 0.2s;
+    z-index: -1;
+  }
+
+  .projectCardWrap:hover .cardOverlay,   .projectCardWrap:focus-within .cardOverlay{
+    scale: 110%;
+    left: 30px;
+    top: 0px;
+    rotate: 3deg;
+  }  
+  .projectCardWrap:hover .projectCard,   .projectCardWrap:focus-within .projectCard{
+    border: 10px solid rgba(255, 187, 0);
+    background-size: 105.5%;
+    rotate: -5deg;
+  }  
+
+  .cardsLayout{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  /* .projectCard::before{
   content: "";
   background-color: rgba(255, 187, 0);
   top: 0px;
   width: 500px;
   height: 100%;
   left: 0px;   
-  z-index: -1;
+  z-index: -100;
+  scale: 100%;
+  rotate: 0deg;
 }
 .projectCard:hover::before{ 
-  z-index: -1;
   scale: 110%;
   rotate: 15deg;
-}
+} */
 
   @media(min-width: 800px){
   }
 
   .click{
     position: absolute;
-    left: 20px;
-    width: 400px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
   }
 
   .bottomCard{
     margin-top: -10px;
-    margin-left: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     width: 400px;
   }
 
@@ -111,33 +152,11 @@ const allProjects = await getCollection("clients");
 
   .bottomCard h2,a:hover{  }
 
-  .peter{
-    background-image: url(src/content/projects/chv/peter.png);
+  .backgroundCard{
     background-repeat: none;
     background-position: center;
     background-size: 100%;
-  } .peter:after{ content: "this is content for the CHV section" }
-
-  .chv{
-    background-image: url(src/content/clients/chv/thumbnail.png);
-    background-repeat: none;
-    background-position: center;
-    background-size: 100%;
-  } .chv:after{ content: "this is content for the CHV section" }
-
-  .red{
-    background-image: url(/assets/redmaster/thumbnail.png);
-    background-repeat: none;
-    background-position: center;
-    background-size: 100%;
-  } .red:after{}
-
-  .awc{
-    background-image: url(/assets/awc/thumbnail.png);
-    background-repeat: none;
-    background-position: center;
-    background-size: 100%;
-  } .awc:after{}
+  }
 
   @media(max-width:800px){ 
     .projectCard:after {content: none;} 

@@ -1,12 +1,13 @@
 ---
-const { folder } = Astro.props;
+import Image from "astro/components/Image.astro";
+
+const { image } = Astro.props;
+const { alt } = Astro.props;
 const { w } = Astro.props;
-const { j } = Astro.props;
 
 ---
 
-<img class="image-component" style=`width: ${w}; --just = ${j};` src=`/assets/${folder}`>
-</img>
+<Image class="image-component" alt=`${alt}` src={image} style=`width: ${w}`/>
 
 <style>
   .image-component {
