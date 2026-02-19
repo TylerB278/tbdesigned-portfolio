@@ -29,7 +29,14 @@ import PersonalWork from "@components/PersonalWork.astro";
   <ClientList />
   <div class="sep"></div>
   <h2 class="sectH">Projects</h2>
-  <ProjectList />
+
+  <!-- Scroll Section -->
+  <div id="scrollContain">
+    <div class="arrowL"> &lt </div>
+    <div class="arrowR"> &gt </div>
+    <ProjectList />
+  </div>
+
   <div class="sep"></div>
   <PersonalWork></PersonalWork>
     
@@ -169,4 +176,60 @@ nav{
   height: 60px;
 }
 
+/*Scroll Content*/
+
+  .arrowL, .arrowR{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7vw;
+    height: 40vw;
+    /* background-color: var(--color-accent); */
+    border: 5px solid var(--color-accent);
+    color: var(--color-accent);
+    border-radius: 10px;
+    opacity: 35%;
+    font-size: 10vw;
+    z-index: 0;
+  }
+  
+  /* Scroll Content */
+  .arrowL, .arrowR{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7vw;
+    height: 40vw;
+    /* background-color: var(--color-accent); */
+    border: 5px solid var(--color-accent);
+    color: var(--color-accent);
+    border-radius: 10px;
+    opacity: 35%;
+    font-size: 10vw;
+    z-index: 0;
+  }
+
+  .arrowL{ left: 1.7vw; }
+  .arrowR{ right: 1.7vw; }
+
+  .arrowL:hover, .arrowR:hover{
+    opacity: 100%;
+  }
+
+  #scrollContain{
+    align-content: center;
+    margin-top: 50px;
+    padding-left: 10vw;
+    margin-bottom: 50px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    height: 44vw;
+    /* border: 10px solid var(--color-accent); */
+  }
+  
 </style>

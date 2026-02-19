@@ -9,7 +9,7 @@ import "@fontsource/karla";
   :root {
     --color-background: rgb(0, 0, 0);
     --color-text: rgb(255, 225, 0);
-    --color-accent: rgb(40, 19, 0);
+    --color-accent: rgb(255, 242, 0);
     --color-focus-ring: rgb(198, 115, 0);
 
     --font-body: "Inter", sans-serif;
@@ -52,4 +52,20 @@ import "@fontsource/karla";
   *:focus-visible {
     outline: 3px solid var(--color-focus-ring);
   }
+
+  ::-webkit-scrollbar {
+      width: .4rem;
+      height: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+      /* box-shadow: inset 0 0 3px var(--color-accent); */
+      border-radius: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: var(--color-accent);
+      border-radius: 5px;
+  }
+
 </style>

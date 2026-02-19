@@ -21,7 +21,7 @@ const allProjects = await getCollection("projects");
   {
     allProjects.map((project) => (
       <div class="fullCard">
-        <div class={`projectCard ${project.data.class}`}><a href={`/projects/${project.id}/`} class="click"></a></div>
+        <div class={`projectCard ${project.data.class} case`}><a href={`/projects/${project.id}/`} class="click"></a></div>
         <div class="bottomCard">
           <a href={`/projects/${project.id}/`}>
             {/* conditional rendering:
@@ -56,7 +56,7 @@ const allProjects = await getCollection("projects");
   .projectCard{
     display: flex;
     background-repeat: none;
-    background-size: cover;
+    background-size: contain;
     align-items: center;
     overflow: visible;
     width: 400px;
@@ -71,6 +71,17 @@ const allProjects = await getCollection("projects");
   .projectCard:hover{
     border: 10px solid rgba(255, 187, 0);
     background-size: 105.5%;
+  }
+
+  .case{
+    display: inline-block;
+    scroll-snap-align: center;
+    width: 80vw;
+    height: 40vw;
+    margin-right: 10vw;
+    border-radius: 20px;
+    border: 10px solid #ff660050;
+    border-opacity: 50;
   }
 
   /* .projectCard:after{
