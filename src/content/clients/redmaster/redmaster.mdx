@@ -9,8 +9,9 @@ thumbnail: thumbnail.png
 {/* using components in an MDX file */}
 import ImageComponent from '@components/ImageComponent.astro';
 import MultiCol from '@components/MultiCol.astro';
+import thumb from 'thumbnail.png'
 
-<ImageComponent folder="redmaster/thumbnail.png" w="500px"/>
+<ImageComponent alt="thumbnail image" image={thumb} w="500px"/>
 
 I have worked with the streamer Redmaster on multiple occasions to create more of a brand identity for him and help him promote himself to new audiences!
 
@@ -21,15 +22,15 @@ Below you can see all of the works I made for Redmaster. This first section belo
 <br/>
 
 <MultiCol>
-    <ImageComponent folder="redmaster/thumbnail.png" w="30%"/>
-    <ImageComponent folder="redmaster/thumbnail.png" w="30%"/>
-    <ImageComponent folder="redmaster/thumbnail.png" w="30%"/>
+    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
+    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
+    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
 </MultiCol>
 
 The next set of graphics I also made as rewards for his viewers, they are design templates for a set of digital cards he would give out as rewards.
 
 <MultiCol>
-    <ImageComponent folder="redmaster/thumbnail.png" w="30%"/>
-    <ImageComponent folder="redmaster/thumbnail.png" w="30%"/>
-    <ImageComponent folder="redmaster/thumbnail.png" w="30%"/>
+    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
+    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
+    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
 </MultiCol>
