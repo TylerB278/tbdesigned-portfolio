@@ -45,6 +45,27 @@ import PersonalWork from "@components/PersonalWork.astro";
 </Layout>
 <div class="footer">© Tyler Boggi 2026</div>
 
+<script>
+
+  const arrowL = document.querySelector(".arrowL");
+  const arrowR = document.querySelector(".arrowR");
+  const scrollBox = document.getElementsByClassName(".scrollContain");
+
+  const scrollL = function () {
+    // alert("YOU'VE BEEN CLICKED!!");
+    document.getElementById('scrollContain').scrollLeft -= ((document.getElementById('scrollContain').scrollWidth)/4);
+  };
+
+  const scrollR = function () {
+    // alert("YOU'VE BEEN CLICKED!!");
+    document.getElementById('scrollContain').scrollLeft += ((document.getElementById('scrollContain').scrollWidth)/4);
+  };
+
+  arrowL?.addEventListener("click", scrollL);
+  arrowR?.addEventListener("click", scrollR);
+  
+</script>
+
 <style>
 
 nav{
