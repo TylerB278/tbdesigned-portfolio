@@ -6,8 +6,10 @@ content: "this is content for the awc section"
 thumbnail: thumbnail.png
 ---
 
+import Container from '@components/Container.astro';
 import Image from "astro/components/Image.astro";
 import ImageComponent from '@components/ImageComponent.astro';
+import TextBox from '@components/TextBox.astro';
 import MultiCol from '@components/MultiCol.astro';
 import IM1 from 'intramurals1.png'
 import IM2 from './intramurals2.png'
@@ -17,11 +19,10 @@ import GeneralNPEA from './general-interest.png'
 import SUNY from './suny-poster.png'
 import WW from './ww-poster.png'
 
-## Intramural Promotional Posters
-
-Below here you can see some of the posters that I made for their intramural events advertising what is offered and giving instructions on how to sign up.
+<Container>
 
 <MultiCol>
+        <TextBox w="500px" text="Below here you can see some of the posters that I made for their intramural events advertising what is offered and giving instructions on how to sign up."  head="Intramural Promotional Posters" />
         <ImageComponent alt="Poster advertising the intramural leagues being offered" image={IM1} w="500px"/>
         <ImageComponent alt="Poster advertising the imleagues intramural app" image={IMPoster} w="500px"/>
         <ImageComponent alt="Poster advertising the intramural leagues being offered" image={IM2} w="500px"/>
@@ -40,3 +41,5 @@ Here you can see the posters and advertising materials I made for the Esports pr
         <ImageComponent alt="Poster advertising the games offerend in SUNY League for New Paltz Esports" image={SUNY} w="500px"/>
         <ImageComponent alt="Poster advertising a club collaboration event with New Paltz Esports" image={WW} w="500px"/>
 </MultiCol>
+
+</Container>

@@ -6,9 +6,9 @@ const { alt } = Astro.props;
 const { w } = Astro.props;
 
 ---
-
-<Image class="image-component" alt=`${alt}` src={image} style=`width: ${w}`/>
-
+<div class="imgFit">
+  <Image class="image-component" alt=`${alt}` src={image} style=`width: ${w}`/>
+</div>
 <style>
   .image-component {
     display: flex;
@@ -18,5 +18,11 @@ const { w } = Astro.props;
     margin: 0 auto;
     transition: all 0.2s;
     /* max-width: 400px; */
-  } .image-component:hover{ rotate: 2deg; }
+  } .image-component:hover{ scale: 103%; }
+
+  @media(max-width: 850px){
+    .imgFit{
+      height: fit-content;
+    }
+  }
 </style>

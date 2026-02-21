@@ -6,17 +6,48 @@ content: "this is content for the chv section"
 thumbnail: thumbnail.png
 ---
 
+import Container from '@components/Container.astro';
 import ImageComponent from '@components/ImageComponent.astro';
 import MultiCol from '@components/MultiCol.astro';
+import S11PR from 's11-fullPR.png';
+import S13PR from 's13-fullPR.png';
+import thumb from 'thumbnail.png'
 
-## Intramural Promotional Posters
+<Container>
 
-Below here you can see some of the posters that I made for their intramural events advertising what is offered and giving instructions on how to sign up.
+## Power Ranking Graphics
+
+<MultiCol>
+        <ImageComponent alt="Rankings Graphic made for COntender's 13th Season" image={S13PR} w="600px"/>
+        <ImageComponent alt="Rankings Graphic made for COntender's 11th Season" image={S11PR} w="600px"/>
+</MultiCol>
+
+I worked with the Contender Esports center in the Hudson Valley for many years to create graphics for their Smash Brothers events.
+
+For these two projects I used a combination of 3D posing techniques and texturing in Blender, vector graphics in Illustrator, and compositing of the final design in Photoshop.
 
 
-## New Paltz Esports
+## Blender 3D Rendering
 
-Additionally through my Athletics internship I defined the design style for Esports at SUNY New Paltz. Below you can see the logo that I created to represent New Paltz Esports along with the same Athletics guidelines.
+For the first step I'd import the models into blender and pose them how I'd like for each character, in the end it would look like this:
 
+image
 
-Here you can see the posters and advertising materials I made for the Esports program through my time with the internship. I defined the design style for NP Esports to have the grainy background and sharp shapes to convey the same style of New Paltz but in a grittier, more competitive way.
+For the next step I'd do any texturing, lighting, and editing of the model in order to produce the final 3D render to move into the next step, here is how those would turn out:
+
+image
+
+From there I bring the renders into Illustrator to create the unique style of each power ranking, here is what it looks like:
+
+image
+
+## Composition and External Media
+
+And in the end once I've completed that process with every player I put them all together in Photoshop to create one big graphic!
+
+<MultiCol>
+        <ImageComponent alt="Rankings Graphic made for COntender's 13th Season" image={S13PR} w="600px"/>
+        <ImageComponent alt="Rankings Graphic made for COntender's 11th Season" image={S11PR} w="600px"/>
+</MultiCol>
+
+</Container>

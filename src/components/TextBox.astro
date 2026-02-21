@@ -1,0 +1,32 @@
+---
+import Image from "astro/components/Image.astro";
+
+const { w } = Astro.props;
+const { text } = Astro.props;
+const { head } = Astro.props;
+
+---
+<div class="textFit" style=`width: ${w}`>
+  <h2>{head}</h2>
+  <p>{text}</p>
+</div>
+<style>
+
+  h2{
+    margin-bottom: 20px;
+  }
+
+  .textFit {
+    color: white;
+    align-content: center;
+    flex-flow: row wrap;
+    padding: 10px;
+    transition: all 0.2s;
+  }
+
+  @media(max-width: 850px){
+    .textFit{
+      height: fit-content;
+    }
+  }
+</style>
