@@ -52,8 +52,8 @@ const allProjects = await getCollection("clients");
     height: 300px;
     margin: 10px;
     margin-bottom: 0px;
-    background-color: rgb(255, 230, 0);
-    border: 0px solid rgba(255, 187, 0);
+    background-color: var(--color-accent);
+    border: 0px solid var(--color-accent);
     transition: all 0.2s;
   }
 
@@ -71,7 +71,7 @@ const allProjects = await getCollection("clients");
 
   .cardOverlay{
     position: absolute;
-    background-color: rgba(255, 187, 0);
+    background-color: var(--color-accent);
     top: 0px;
     width: 450px;
     height: 300px;
@@ -88,7 +88,7 @@ const allProjects = await getCollection("clients");
     rotate: 3deg;
   }  
   .projectCardWrap:hover .projectCard,   .projectCardWrap:focus-within .projectCard{
-    border: 10px solid rgba(255, 187, 0);
+    border: 10px solid var(--color-accent);
     background-size: 105.5%;
     rotate: -5deg;
   }  
@@ -133,7 +133,7 @@ const allProjects = await getCollection("clients");
   }
 
   .bottomCard h2{
-    color: yellow;
+    color: var(--color-accent);
     width: 500px;
     padding-left: 20px;
     padding-top: 5px;
@@ -143,7 +143,7 @@ const allProjects = await getCollection("clients");
   }
   .bottomCard a{ text-decoration: none; }
   .bottomCard p{
-    color: yellow;
+    color: var(--color-accent);
     width: 400px;
     padding-left: 20px;
     padding-bottom: 10px;

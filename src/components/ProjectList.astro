@@ -56,20 +56,25 @@ const allProjects = await getCollection("projects");
     overflow: visible;
     /* width: 400px; */
     /* height: 250px; */
-    margin: 20px;
+    margin: 0px;
     margin-bottom: 0px;
-    background-color: rgb(255, 230, 0);
-    border: 0px solid rgba(255, 187, 0);
+    background-color: var(--color-accent);
+    border: 0px solid var(--color-accent);
+    background-size: cover;
     transition: all 0.2s;
   }
 
   .fullCard:hover .projectCard, .click:hover .projectCard{
-    border: 10px solid rgba(255, 187, 0);
-    background-size: 105.5%;
+    border: 10px solid var(--color-accent);
+    /* background-size: 100%; */
   }
 
   .fullCard:hover .bottomCard, .click:hover .bottomCard{
-    background-color: rgba(255, 187, 0);
+    background-color: #fee27150;
+  }
+
+  .fullCard:hover .bottomCard h2, .fullCard:hover .bottomCard p, .click:hover .bottomCard h2, .click:hover .bottomCard p{
+    color: var(--color-text);
   }
 
   .fullCard{
@@ -87,31 +92,7 @@ const allProjects = await getCollection("projects");
     height: 30vw;
     margin-right: 40vw;
     border-radius: 20px;
-    border: 10px solid #ff660050;
-    border-opacity: 50;
   }
-
-  /* .projectCard:after{
-    padding: 20px;
-    background-color: rgba(255, 187, 0);
-    position: relative;
-    top: 0px;
-    width: 500px;
-    height: 323.5px;
-    left: 0px;
-    transition: all 0.2s;
-    z-index: -1;
-
-  }
-  .projectCard:hover:after{ 
-    background-color: rgba(255, 187, 0);
-    position: relative;
-    top: -10px;
-    width: 80vw;
-    height: 323.5px;
-    left: 490px;
-
-  } */
 
   .click{
     position: absolute;
@@ -121,18 +102,20 @@ const allProjects = await getCollection("projects");
   }
 
   .bottomCard{
-    background-color: #ff660050;
+    background-color: var(--color-background);
     position: relative;
-    margin-top: -102px;
-    margin-left: 30px;
-    margin-bottom: 50px;
-    width: 30vw;
-    border-bottom-left-radius: 10px;
+    margin-top: -120px;
+    margin-left: 20px;
+    margin-bottom: 60px;
+    width: fit-content;
+    padding-right: 20px;
+    padding-top: 5px;
+    border-radius: 10px;
     transition: all 0.2s;
   }
 
   .bottomCard h2{
-    /* background-color: rgba(255, 187, 0); */
+    color: var(--color-accent);
     /* width: 400px; */
     margin-left: 20px;
     margin-bottom: 20px;
@@ -142,7 +125,7 @@ const allProjects = await getCollection("projects");
   .bottomCard a{ text-decoration: none; }
   .bottomCard p{
     /* background-color: rgba(255, 187, 0); */
-    color: white;
+    color: var(--color-accent);
     /* width: 400px; */
     padding-left: 20px;
     padding-bottom: 10px;
