@@ -42,8 +42,8 @@ nav{
   top: -5px;
   paint-order: stroke fill;
   /* border-top: 5px solid yellow; */
-  border-bottom: 5px solid yellow;
-  background-color: black;
+  border-bottom: 5px solid var(--color-focus-ring);
+  background-color: var(--color-background);
   width: 100%;
   height: 9vh;
   z-index: 100;
@@ -68,10 +68,10 @@ nav{
   padding-left: 5px;
   padding-right: 5px;
   height: 100%;
-  color: yellow;
+  color: var(--color-accent);
   text-decoration: none; 
 }
-.navItm:hover{ color: black; background-color: yellow;}
+.navItm:hover{ color: var(--color-background); background-color: var(--color-accent);}
 
   .contain{
     padding: 30px;
@@ -91,14 +91,14 @@ nav{
     margin-top: 20px;
     margin-bottom: 40px;
     text-decoration: underline;
-    color: white;
+    color: var(--color-text);
   }
 
   h2{
     display: flex;
     justify-content: center;
     margin: 20px;
-    color: white;
+    color: var(--color-text);
     font-size: 36px;
     text-align: center;
     text-decoration: underline;
@@ -142,8 +142,8 @@ nav{
     padding: 10px;
     padding-right: 50px;
     /* border-top: 10px solid rgb(176, 85, 0); */
-    background-color: rgba(255, 187, 0);
-    color: black;
+    background-color: var(--color-focus-ring);
+    color: var(--color-background);
     height: 60px;
   }
 </style>
