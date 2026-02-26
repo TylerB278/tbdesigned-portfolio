@@ -2,7 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import ImageComponent from "@components/ImageComponent.astro";
 import Container from "@components/Container.astro";
-import TyLogo from "@assets/images/testTy.png";
+import TyLogo from "@assets/images/tyAbout.JPG";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
 import ProjectList from "@components/ProjectList.astro";
@@ -16,10 +16,10 @@ import PersonalWork from "@components/PersonalWork.astro";
     <img src="/tyLogo.png" class="title timg"></img>
     <h2 class="title th2">Graphic Designer</h2>
   </div>
-  <nav>
-    <div class="navR">
+  <nav id="navtop">
+    <div class="navR prevent-select">
       <a class="navItm" href="#top">Portfolio</a>
-      <a class="navItm" href="https://t-boggi-linktree.netlify.app/">About Me</a>
+      <a class="navItm" href="/about">About Me</a>
       <a class="navItm" href="https://t-boggi-linktree.netlify.app/">Contact Me!</a>
     </div>
   </nav>
@@ -32,7 +32,7 @@ import PersonalWork from "@components/PersonalWork.astro";
     <div class="aText">
       <h2>About Me!</h2>
       <p>Hello, my name is Tyler Boggi! I am a graphic designer specializing in branding and web design/development! I am a graduate from SUNY New Paltz with several years of professtional Design under my belt! If you'd like to learn more about me check out my</p>
-      <a>About me page</a>
+      <a href="/about">About me page</a>
     </div>
     <Image alt="a picture of me" src={TyLogo} width="300" class="aImg"/>
   </div>
@@ -43,13 +43,14 @@ import PersonalWork from "@components/PersonalWork.astro";
   <h2 class="sectH">Clients</h2>
   <ClientList />
   <!-- <div class="sep"></div> -->
-   <div class="gap" id="top"></div>
+  <div class="gap" id="top"></div>
+
   <h2 class="sectH">Projects</h2>
 
   <!-- Scroll Section -->
   <div id="scrollContain">
-    <div class="arrowL"> &lt </div>
-    <div class="arrowR"> &gt </div>
+    <div class="arrowL prevent-select"> &lt </div>
+    <div class="arrowR prevent-select"> &gt </div>
     <ProjectList />
   </div>
 
@@ -61,6 +62,15 @@ import PersonalWork from "@components/PersonalWork.astro";
 <div class="footer">© Tyler Boggi 2026</div>
 
 <script>
+  window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navtop');
+  if (window.scrollY > 120) // Shows after 100px of scrolling
+  { 
+    navbar?.classList.add('show');
+  } else {
+    navbar?.classList.remove('show');
+  }
+});
 
   const arrowL = document.querySelector(".arrowL");
   const arrowR = document.querySelector(".arrowR");
@@ -84,8 +94,7 @@ import PersonalWork from "@components/PersonalWork.astro";
 <style>
 
 nav{
-  position: sticky;
-  top: -5px;
+  position: fixed;
   paint-order: stroke fill;
   border-top: 5px solid var(--color-focus-ring);
   border-bottom: 5px solid var(--color-focus-ring);
@@ -94,6 +103,9 @@ nav{
   height: 9vh;
   z-index: 1000
 }
+
+#navtop { top: -100px; transition: top 0.5s; }
+#navtop.show { top: -5px; }
 
 .navR{
   height: 100%;
@@ -123,6 +135,7 @@ nav{
   /* position: sticky;
   top: 10%; */
   /* width: 100%; */
+  background-color: var(--color-focus-ring);
   height: 100vh;
   z-index: -100;
   align-content: center;
@@ -132,7 +145,7 @@ nav{
 .title{
 
   transform-origin: center;
-  color: var(--color-text);
+  color: var(--color-accent);
   font-family: "Inter", sans-serif;
   font-size: 10vw;
   font-optical-sizing: auto;
@@ -162,7 +175,8 @@ nav{
   padding: 20px;
   margin-top: 0px;
 } .about p {color: var(--color-background); margin-bottom: 40px;} .about h2{margin-bottom: 10px; color: var(--color-background); justify-content: flex-start; }
-.about a{padding: 20px; background-color: var(--color-background);} .about a:hover{padding: 20px; background-color: var(--color-focus-ring); color: var(--color-background)}
+.about a{padding: 20px; color: var(--color-text); background-color: var(--color-background); text-decoration: none;}
+.about a:hover{padding: 20px; background-color: var(--color-focus-ring); color: var(--color-background)}
 
 .aText{
   justify-content: center;
@@ -278,8 +292,8 @@ nav{
   }
 
   #scrollContain{
-    align-content: center;
-    margin-top: -200px;
+    align-content: flex-start;
+    margin-top: 0px;
     padding-left: 40vw;
     margin-bottom: 0px;
     white-space: nowrap;
@@ -287,8 +301,14 @@ nav{
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    height: 44vw;
+    height: 35vw;
     /* border: 10px solid var(--color-accent); */
+  }
+
+  .prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
   }
 
 </style>

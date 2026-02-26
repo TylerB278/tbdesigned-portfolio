@@ -1,0 +1,130 @@
+---
+import Container from "@components/Container.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title=about>
+  <nav>
+    <div class="navR">
+      <a class="navItm" href="/">Portfolio</a>
+      <a class="navItm">Contact Me!</a>
+    </div>
+  </nav>
+    <Container>
+      <div class="contain">
+        <h1>About Me</h1>
+      </div>
+    </Container>
+  
+</Layout>
+<div class="footer">© Tyler Boggi 2026</div>
+<style>
+
+  nav{
+  position: sticky;
+  top: -5px;
+  paint-order: stroke fill;
+  border-bottom: 5px solid var(--color-focus-ring);
+  background-color: var(--color-background);
+  width: 100%;
+  height: 8vh;
+  z-index: 100;
+}
+
+.navR{
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  gap: 20px;
+}
+
+.navItm{
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  font-size: 30px;
+  padding: 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: var(--color-accent);
+  text-decoration: none; 
+}
+.navItm:hover{ color: var(--color-background); background-color: var(--color-accent);}
+
+  .contain{
+    padding: 30px;
+  }
+
+  .content{
+    padding: 30px;
+  }
+
+  h1{
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-decoration: underline;
+    color: var(--color-text);
+  }
+
+  .subHead{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    color: var(--color-text);
+    font-size: 36px;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 800;
+  }
+
+  .workImg{
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .colImg{
+    max-width: 30%;
+    height: auto;
+  }
+
+  p{
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 700px;
+  }
+
+  .multiCol{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 20px;
+    padding: 10px;
+    padding-right: 50px;
+    /* border-top: 10px solid rgb(176, 85, 0); */
+    background-color: var(--color-focus-ring);
+    color: var(--color-background);
+    height: 60px;
+  }
+</style>
