@@ -5,5 +5,43 @@ class: bside
 thumbnail: thumbnail.png
 ---
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+import ImageComponent from '@components/ImageComponent.astro';
+import TextBox from '@components/TextBox.astro';
+import MultiCol from '@components/MultiCol.astro';
+import BsideIn from 'bside-in.jpg';
+import BsideOut from 'bside-out.webp';
+import BsideRedesign from 'bside-colLogo.png';
+import BsideMenu from 'bside-menu.png';
+import BsideMug from 'bside-mug.png';
+
+<MultiCol>
+    <TextBox w="600px" text="
+    For this project I redesigned a local restaurant's logo and branding!
+    B-Side Grill is a small restaurant based in New Paltz.
+    It is a very heavily themed restaurant,
+    being based around old music CDs with a very retro and nostalgic feel to all of their branding.
+    That being said they have a very standard and underdeveloped logo that doesn't reflect the rest of their physical restaurant.
+    And so I took it upon myself to give this logo and some of their other branding a touch up to reflect how they theme their establishment." />
+    <ImageComponent alt="Image of the outside of B-Side Grill" image={BsideOut} w="400px" />
+    <ImageComponent alt="Image of the inside of B-Side Grill" image={BsideIn} w="400px" />
+</MultiCol>
+
+<MultiCol>
+    <ImageComponent alt="Image of the outside of B-Side Grill" image={BsideOut} w="400px" />
+    <ImageComponent alt="Image of the inside of B-Side Grill" image={BsideIn} w="400px" />
+    <TextBox w="600px" text="This is a section about my progress and how I got to my final logo huzzah!" />
+</MultiCol>
+
+<TextBox w="600px" text="Below you can see my final outcome for the logo! I made both a full color logo and a black and white logo for multiple applications." />
+
+<MultiCol>
+    <ImageComponent alt="Image of the outside of B-Side Grill" image={BsideRedesign} w="600px" />
+    <ImageComponent alt="Image of the inside of B-Side Grill" image={BsideRedesign} w="600px" />
+</MultiCol>
+
+<TextBox w="800px" text="From here I took the logo that I made and allied it to their branding! I did this through a mockup for a mug people could buy and a page of their menu." />
+
+<MultiCol>
+    <ImageComponent alt="Image of the outside of B-Side Grill" image={BsideMenu} w="500px" />
+    <ImageComponent alt="Image of the inside of B-Side Grill" image={BsideMug} w="600px" />
+</MultiCol>
