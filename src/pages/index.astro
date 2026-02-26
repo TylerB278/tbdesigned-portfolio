@@ -2,7 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import ImageComponent from "@components/ImageComponent.astro";
 import Container from "@components/Container.astro";
-import AstroLogo from "@assets/images/astro-logo-light-gradient.png";
+import TyLogo from "@assets/images/testTy.png";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
 import ProjectList from "@components/ProjectList.astro";
@@ -19,15 +19,31 @@ import PersonalWork from "@components/PersonalWork.astro";
   <nav>
     <div class="navR">
       <a class="navItm" href="#top">Portfolio</a>
+      <a class="navItm" href="https://t-boggi-linktree.netlify.app/">About Me</a>
       <a class="navItm" href="https://t-boggi-linktree.netlify.app/">Contact Me!</a>
     </div>
   </nav>
   <Container>
-  <div class="gap" id="top"></div>
+  
+  <div class="gap"></div>
+  <div class="sep"></div>
 
+  <div class="about">
+    <div class="aText">
+      <h2>About Me!</h2>
+      <p>Hello, my name is Tyler Boggi! I am a graphic designer specializing in branding and web design/development! I am a graduate from SUNY New Paltz with several years of professtional Design under my belt! If you'd like to learn more about me check out my</p>
+      <a>About me page</a>
+    </div>
+    <Image alt="a picture of me" src={TyLogo} width="300" class="aImg"/>
+  </div>
+
+  <div class="sep"></div>
+
+  <div class="gap" id="top"></div>
   <h2 class="sectH">Clients</h2>
   <ClientList />
-  <div class="sep"></div>
+  <!-- <div class="sep"></div> -->
+   <div class="gap" id="top"></div>
   <h2 class="sectH">Projects</h2>
 
   <!-- Scroll Section -->
@@ -37,8 +53,7 @@ import PersonalWork from "@components/PersonalWork.astro";
     <ProjectList />
   </div>
 
-  <div class="sep"></div>
-  <PersonalWork></PersonalWork>
+  <!-- <PersonalWork></PersonalWork> -->
     
   </Container>
   <div class="gap"></div>
@@ -137,6 +152,28 @@ nav{
   text-underline-offset: 10px;
 }
 
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 500px;
+  background-color: var(--color-accent);
+  padding: 20px;
+  margin-top: 0px;
+} .about p {color: var(--color-background); margin-bottom: 40px;} .about h2{margin-bottom: 10px; color: var(--color-background); justify-content: flex-start; }
+.about a{padding: 20px; background-color: var(--color-background);} .about a:hover{padding: 20px; background-color: var(--color-focus-ring); color: var(--color-background)}
+
+.aText{
+  justify-content: center;
+  align-content: center;
+  max-width: 400px;
+}
+
+.aImg{
+  height: 400px;
+}
+
 .pers{ font-size: 60pt; width: 600px;}
 
 @keyframes popIn {
@@ -183,7 +220,7 @@ nav{
 }
 
 .gap{height: 100px;}
-.sep{width: 100%; height: 40px; border-top: 12px solid var(--color-focus-ring); border-bottom: 8px solid var(--color-focus-ring); margin-top: 40px; margin-bottom: 50px;}
+.sep{width: 100%; height: 40px; border-top: 10px solid var(--color-accent); border-bottom: 10px solid var(--color-accent); margin-top: 10px; margin-bottom: 10px;}
 
 .footer{
   display: flex;
@@ -242,7 +279,7 @@ nav{
 
   #scrollContain{
     align-content: center;
-    margin-top: 0px;
+    margin-top: -200px;
     padding-left: 40vw;
     margin-bottom: 0px;
     white-space: nowrap;
