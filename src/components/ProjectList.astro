@@ -22,7 +22,7 @@ const allProjects = await getCollection("projects");
     allProjects.map((project) => (
       <div class="fullCard">
         <a href={`/projects/${project.id}/`} class="click"></a>
-        <div class="projectCard backgroundCard case" style={`background-image: url(${project?.data?.thumbnail?.src})`}></div>
+        <div class="projectCard backgroundCard case" id={`${project.data.class}`} style={`background-image: url(${project?.data?.thumbnail?.src})`}></div>
         <div class="bottomCard">
           {/* <a href={`/projects/${project.id}/`}></a> */}
             {/* conditional rendering:
@@ -63,6 +63,18 @@ const allProjects = await getCollection("projects");
     background-size: cover;
     transition: all 0.2s;
   }
+
+  @keyframes locked {
+  0% { scale: 100%; rotate: 0deg; }
+  16.66% { scale: 95%; rotate: 2deg; }
+  33.33% { scale: 95%; rotate: 0deg; }
+  50% { scale: 95%; rotate: -2deg; }
+  66.66% { scale: 95%; rotate: 0deg; }
+  83.33% { scale: 95%; rotate: 2deg; }
+  100% { scale: 100%; rotate: 0deg; }
+  }
+
+  .fullCard:hover #dshow26, .fullCard:hover #thesis{ border: 0px; animation: locked 0.2s; }
 
   .fullCard:hover .projectCard, .click:hover .projectCard{
     border: 10px solid var(--color-accent);

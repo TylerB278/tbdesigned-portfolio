@@ -12,9 +12,10 @@ import PersonalWork from "@components/PersonalWork.astro";
 
 <Layout title="T.B.Designed">
   <div class="heroSect">
-    <h1 class="title th1">Tyler Boggi</h1>
-    <img src="/tyLogo.png" class="title timg"></img>
-    <h2 class="title th2">Graphic Designer</h2>
+    <!-- <h1 class="title th1">Tyler Boggi</h1> -->
+     <video width="1500" height="800" autoplay="autoplay" src="tyHeader.webm" class="timg" />
+    <!-- <img src="/tyHeader.webm" class="timg"></img> -->
+    <!-- <h2 class="title th2">Graphic Designer</h2> -->
   </div>
   <nav id="navtop">
     <div class="navR prevent-select">
@@ -135,10 +136,11 @@ nav{
   /* position: sticky;
   top: 10%; */
   /* width: 100%; */
-  background-color: var(--color-focus-ring);
+  background-color: black;
   height: 100vh;
   z-index: -100;
   align-content: center;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -221,11 +223,10 @@ nav{
 }
 .timg{ 
   z-index: 10; 
-  width: 40%; 
-  max-width: 400px; 
   margin: 0 auto;
+  display: flex;
+  animation-repeat: none;
   transform: scale(100%);
-  animation: popIn 1s;
 }
 
 @media(min-width: 1150px){
@@ -244,8 +245,9 @@ nav{
   padding: 10px;
   padding-right: 50px;
   /* border-top: 10px solid rgb(176, 85, 0); */
-  background-color: var(--color-focus-ring);
-  color: var(--color-background);
+  background-color: var(--color-background);
+  border-top: 5px solid var(--color-focus-ring);
+  color: var(--color-accent);
   height: 60px;
 }
 
