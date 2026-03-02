@@ -12,10 +12,10 @@ import "@fontsource/karla";
     --color-accent: #fee271;
     --color-focus-ring: #f58434;
 
-    --font-body: "Inter", sans-serif;
-    --font-headings: "Inter", sans-serif;
+    --font-body: "Encode Sans", sans-serif;
+    --font-headings: "Plaster", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 18px;
 
     /* These sizes are used by the Container component to set up the page container */
@@ -35,18 +35,21 @@ import "@fontsource/karla";
   h4,
   h5,
   h6 {
+    font-family: var(--font-headings);
     color: var(--color-accent);
+    text-decoration: none;
   }
 
   h2{
     display: flex;
     justify-content: center;
+    font-family: var(--font-body);
     /* margin: 20px; */
     color: white;
     font-size: 32px;
     text-align: center;
-    text-decoration: underline;
-    font-weight: 800;
+    text-decoration: none;
+    font-weight: 900;
   }
   /* default focus ring styles */
   *:focus-visible {

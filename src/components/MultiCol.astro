@@ -1,7 +1,10 @@
 ---
+
+const { mw } = Astro.props;
+
 ---
 
-<div class="multiCol">
+<div class="multiCol" style=`max-width: ${mw}`>
     <slot/>
 </div>
 
@@ -11,6 +14,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-self: center;
     align-items: center;
     overflow-x: hidden;
     margin-top: 30px;

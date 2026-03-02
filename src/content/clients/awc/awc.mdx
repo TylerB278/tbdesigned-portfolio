@@ -14,28 +14,40 @@ import IM1 from 'intramurals1.png'
 import IM2 from './intramurals2.png'
 import IMPoster from './imleagues-poster.png'
 import NPEAlogo from './npesports-logo.png'
+import NPEAlogoIcon from './npesports-icon-logo.png'
 import GeneralNPEA from './general-interest.png'
 import SUNY from './suny-poster.png'
 import WW from './ww-poster.png'
+import oBlue from './ootw-blue.png'
+import oOrange from './ootw-orange.png'
+import WWTempBlue from './f25-floorhockey.png'
+import WWTempOrange from './f25-compbasketball.png'
 
 <Container>
 
-<MultiCol>
+<MultiCol mw="1200px">
         <TextBox w="500px" text="Below here you can see some of the posters that I made for their intramural events advertising what is offered and giving instructions on how to sign up."  head="Intramural Promotional Posters" />
         <ImageComponent alt="Poster advertising the intramural leagues being offered" image={IM1} w="500px"/>
         <ImageComponent alt="Poster advertising the imleagues intramural app" image={IMPoster} w="500px"/>
         <ImageComponent alt="Poster advertising the intramural leagues being offered" image={IM2} w="500px"/>
 </MultiCol>
 
-## New Paltz Esports
+<MultiCol mw="1200px">
+        <TextBox w="800px" text="Here you can see various recognition posts I made for the AWC in order to promote community and highlight our intramural event winners in order to give them more traction." head="Intramural Recognition Posts" />
+        <ImageComponent alt="Official of the week post, style 1" image={oBlue} w="500px"/>
+        <ImageComponent alt="Official of the week post, style 2" image={oOrange} w="500px"/>
+        <ImageComponent alt="Winning Wenesday Champions post" image={WWTempBlue} w="500px"/>
+        <ImageComponent alt="Intrmural Leagues Chamption post" image={WWTempOrange} w="500px"/>
+</MultiCol>
 
-Additionally through my Athletics internship I defined the design style for Esports at SUNY New Paltz. Below you can see the logo that I created to represent New Paltz Esports along with the same Athletics guidelines.
-
+<MultiCol mw="1200px">
+        <TextBox w="500px" text="Additionally through my Athletics internship I defined the design style for Esports at SUNY New Paltz. Below you can see the logo that I created to represent New Paltz Esports along with the same Athletics guidelines."  head="New Paltz Esports" />
         <ImageComponent alt="Logo for New Paltz Esports" image={NPEAlogo} w="800px"/>
+        <ImageComponent alt="Icon Logo for New Paltz Esports" image={NPEAlogoIcon} w="800px"/>
+</MultiCol>
 
-Here you can see the posters and advertising materials I made for the Esports program through my time with the internship. I defined the design style for NP Esports to have the grainy background and sharp shapes to convey the same style of New Paltz but in a grittier, more competitive way.
-
-<MultiCol>
+<MultiCol mw="1200px">
+        <TextBox w="500px" text="Here you can see the posters and advertising materials I made for the Esports program through my time with the internship. I defined the design style for NP Esports to have the grainy background and sharp shapes to convey the same style of New Paltz but in a grittier, more competitive way." />
         <ImageComponent alt="Poster advertising an interest meeting for New Paltz Esports" image={GeneralNPEA} w="500px"/>
         <ImageComponent alt="Poster advertising the games offerend in SUNY League for New Paltz Esports" image={SUNY} w="500px"/>
         <ImageComponent alt="Poster advertising a club collaboration event with New Paltz Esports" image={WW} w="500px"/>

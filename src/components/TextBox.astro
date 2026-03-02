@@ -6,7 +6,7 @@ const { text } = Astro.props;
 const { head } = Astro.props;
 
 ---
-<div class="textFit" style=`width: ${w}`>
+<div class="textFit" style=`max-width: ${w}`>
   <h2>{head}</h2>
   <p>{text}</p>
 </div>

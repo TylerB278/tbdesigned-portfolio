@@ -8,33 +8,54 @@ thumbnail: thumbnail.png
 {/* using components in an MDX file */}
 import Container from '@components/Container.astro';
 import ImageComponent from '@components/ImageComponent.astro';
+import TextBox from '@components/TextBox.astro';
 import MultiCol from '@components/MultiCol.astro';
 import thumb from 'thumbnail.png'
+import subY from 'sub-y.png'
+import subW from 'sub-w.png'
+import subR from 'sub-r.png'
+import subP from 'sub-p.png'
+import subBR from 'sub-br.png'
+import subBL from 'sub-bl.png'
+import lootsC from 'streamloots-common.png'
+import lootsR from 'streamloots-rare.png'
+import lootsE from 'streamloots-epic.png'
+import lootsL from 'streamloots-legend.png'
+import lootsBox from 'streamloots-box.png'
 
 <Container>
 
-<ImageComponent alt="thumbnail image" image={thumb} w="500px"/>
+<ImageComponent alt="thumbnail image" image={thumb} w="800px"/>
 
-I have worked with the streamer Redmaster on multiple occasions to create more of a brand identity for him and help him promote himself to new audiences!
-
-<br/>
-
-Below you can see all of the works I made for Redmaster. This first section below were subscriber icons that would go to his subscribers depending on how long they were subscribed. These are required by twitch to be 72x72px so they can appear on small screens. He instructed me on how he presented himself to his audience and what the works should look like.
-
-<br/>
-
-<MultiCol>
-    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
-    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
-    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
+<MultiCol mw="1200px">
+    <TextBox w="800px" text="I have worked with the streamer Redmaster on multiple occasions to create more of a brand identity for him and help him promote himself to new audiences!" />
 </MultiCol>
 
-The next set of graphics I also made as rewards for his viewers, they are design templates for a set of digital cards he would give out as rewards.
+<MultiCol mw="1200px">
+        <TextBox w="500px" text="These are subscriber icons that would go to his subscribers depending on how long they were subscribed. These are required by twitch to be 72x72px so they can appear on small screens. He instructed me on how he presented himself to his audience and what the works should look like." head="Subscriber Badges" />
+        <MultiCol mw="300px">
+            <ImageComponent alt="Subscriber Icon 1" image={subY} w="100px"/>
+            <ImageComponent alt="Subscriber Icon 2" image={subBL} w="100px"/>
+            <ImageComponent alt="Subscriber Icon 3" image={subR} w="100px"/>
+            <ImageComponent alt="Subscriber Icon 4" image={subP} w="100px"/>
+            <ImageComponent alt="Subscriber Icon 5" image={subBR} w="100px"/>
+            <ImageComponent alt="Subscriber Icon 6" image={subW} w="100px"/>
+        </MultiCol>
+</MultiCol>
+
+<br/>
 
 <MultiCol>
-    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
-    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
-    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
+    <TextBox w="600px" text="The next set of graphics I also made as rewards for his viewers, they are design templates for a set of digital cards he would give out as rewards to his viewers for a certain donation reward. They were organized in the categories of Common, Rare, Epic and Legendary and so I made card templates for each rarity. I also made a chest icon with his branding to help him promote the campaign." head="Streamloots Cards" />
+</MultiCol>
+
+<ImageComponent alt="Stream loots common card" image={lootsBox} w="1200px"/>
+
+<MultiCol mw="1200px">
+    <ImageComponent alt="Stream loots common card" image={lootsC} w="500px"/>
+    <ImageComponent alt="Stream loots rare card" image={lootsR} w="500px"/>
+    <ImageComponent alt="Stream loots epic card" image={lootsE} w="500px"/>
+    <ImageComponent alt="Stream loots legendary card" image={lootsL} w="500px"/>
 </MultiCol>
 
 </Container>
