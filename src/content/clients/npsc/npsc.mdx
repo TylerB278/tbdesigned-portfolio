@@ -3,38 +3,46 @@ title: New Paltz Smash Club
 projectType: Event Design & Branding
 class: npsc
 thumbnail: thumbnail.png
+order: 40
 ---
 
 {/* using components in an MDX file */}
 import Container from '@components/Container.astro';
 import ImageComponent from '@components/ImageComponent.astro';
 import MultiCol from '@components/MultiCol.astro';
+import TextBox from '@components/TextBox.astro';
 import thumb from 'thumbnail.png'
+import logo from 'npsc-logo.png'
+import longLogo from 'npsc-longlogo.png'
+import PosterL from 'monthly-liana.png'
+import PosterT from 'monthly-unity.png'
+import PosterB from 'monthly-baseball.png'
 
 <Container>
 
-<ImageComponent alt="thumbnail image" image={thumb} w="500px"/>
-
-I have worked with the streamer Redmaster on multiple occasions to create more of a brand identity for him and help him promote himself to new audiences!
-
-<br/>
-
-Below you can see all of the works I made for Redmaster. This first section below were subscriber icons that would go to his subscribers depending on how long they were subscribed. These are required by twitch to be 72x72px so they can appear on small screens. He instructed me on how he presented himself to his audience and what the works should look like.
-
-<br/>
-
 <MultiCol>
-    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
-    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
-    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
+    <TextBox w="900px" text="As the lead designer for the club, I have been a part of it for multiple years and I have a lot of works to show for it. I have helped them to attain a stronger design style for their events and for the club as a whole." />
 </MultiCol>
 
-The next set of graphics I also made as rewards for his viewers, they are design templates for a set of digital cards he would give out as rewards.
+<MultiCol mw="1200px">
+    <TextBox w="400px" text="One of the first and biggest things I did for the club was a total overhaul of the logo. To the right you can see both the icon version of the logo and the longer logotype." head="Logo Redesign"/>
+    <ImageComponent alt="New Paltz Smash Club logo" image={logo} w="500px"/>
+    <ImageComponent alt="New Paltz Smash Club logotype" image={longLogo} w="900px"/>
+</MultiCol>
 
 <MultiCol>
-    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
-    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
-    <ImageComponent alt="thumbnail image" image={thumb} w="30%"/>
+    <TextBox w="700px" text="I also make promotional posters, logos and event pages for our monthly events held three times per semester, here are four of my favorites below:" head="Monthly Event Promotion"/>
+</MultiCol>
+
+<MultiCol mw="1200px">
+    <ImageComponent alt="New Paltz Smash Club logo" image={PosterL} w="500px"/>
+    <ImageComponent alt="New Paltz Smash Club logotype" image={PosterB} w="500px"/>
+    <ImageComponent alt="New Paltz Smash Club logo" image={PosterT} w="500px"/>
+    <ImageComponent alt="New Paltz Smash Club logotype" image={PosterT} w="500px"/>
+</MultiCol>
+
+<MultiCol>
+    <TextBox w="800px" text="I'd like to use that last one to elaborte on the process for making an event like this as this one was my personal event that I ran with them. I handled the design of the entire event from top to bottom so let discuss all of the material I made for it."/>
 </MultiCol>
 
 </Container>

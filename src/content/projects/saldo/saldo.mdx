@@ -3,7 +3,38 @@ title: Saldo
 projectType: Branding
 class: saldo
 thumbnail: thumbnail.png
+order: 20
 ---
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+import Container from '@components/Container.astro';
+import ImageComponent from '@components/ImageComponent.astro';
+import TextBox from '@components/TextBox.astro';
+import MultiCol from '@components/MultiCol.astro';
+import Thumb from 'thumbnail.png';
+import carAD from 's-carAD.png';
+import Trifold from 's-trifold.JPG';
+import sFull from 's-full-logo.png';
+import sIcon from 's-icon-logo.png';
+
+<Container>
+
+<MultiCol mw="1200px">
+        <TextBox w="800px" text="For this project I was tasked with making the branding for a luxury car company and several instances of promotional content to showcase the brand style and guidelines" />
+</MultiCol>
+
+<MultiCol mw="1500px">
+    <ImageComponent alt="Poster advertising the intramural leagues being offered" image={sFull} w="800px"/>
+    <ImageComponent alt="Poster advertising the imleagues intramural app" image={sIcon} w="400px"/>
+</MultiCol>
+
+<MultiCol mw="1200px">
+        <TextBox w="1000px" text="Here you can see my logo branding for the project. I went with the theme of an Italian car company built around balancing strength and luxury. The name Saldo actually comes from the Italian word for Balance and sounds fittingly pretentious for the idea of a luxury car company. The Red was used to show strength and the Green to show luxury with the signature yellow both serving as an in-between of the two ideals and as a way to help it stand out from other car brands which felt like a necessity for how much car companies compete for the very similar advertisment space." />
+</MultiCol>
+
+<MultiCol mw="1500px">
+    <TextBox w="400px" text="Here you can see how I applied my branding to some promotional material, for both physical and digital formats" head="Promotional Material"/>
+    <ImageComponent alt="Poster advertising the intramural leagues being offered" image={carAD} w="400px"/>
+    <ImageComponent alt="Poster advertising the imleagues intramural app" image={Trifold} w="500px"/>
+</MultiCol>
+
+</Container>

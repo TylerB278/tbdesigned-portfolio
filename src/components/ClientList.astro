@@ -8,6 +8,9 @@ import { Image } from "astro:assets";
 // import Peter from './astro-logo-light-gradient.png';
 
 const allProjects = await getCollection("clients");
+const sortedProjects = allProjects.sort((a,b) => {
+    return a.data.order - b.data.order;
+})
 // const processedProjects = allProjects.map(async(project)=>{
 
 //   return {...project,imageSrc: await getImage({src: Peter, format: 'png'}) }
@@ -18,7 +21,7 @@ const allProjects = await getCollection("clients");
 ---
 <div class="cardsLayout">
   {
-    allProjects.map((project) => (
+    sortedProjects.map((project) => (
       <div class="projectCardWrap">
         <a href={`/clients/${project.id}/`} class="click"></a>
         <div class={`projectCard backgroundCard`} style={`background-image: url(${project?.data?.thumbnail?.src})`}></div>
