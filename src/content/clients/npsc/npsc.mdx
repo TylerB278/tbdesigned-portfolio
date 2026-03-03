@@ -17,6 +17,12 @@ import longLogo from 'npsc-longlogo.png'
 import PosterL from 'monthly-liana.png'
 import PosterT from 'monthly-unity.png'
 import PosterB from 'monthly-baseball.png'
+import PosterR from 'monthly-rivals.png'
+import UPin from 'unity-pin.png'
+import UIcon from 'unity-icon.png'
+import UBanner from 'unity-banner.png'
+import Stream from 'stream-layout.png'
+import Transition from 'stream-transition.gif'
 
 <Container>
 
@@ -35,14 +41,31 @@ import PosterB from 'monthly-baseball.png'
 </MultiCol>
 
 <MultiCol mw="1200px">
-    <ImageComponent alt="New Paltz Smash Club logo" image={PosterL} w="500px"/>
-    <ImageComponent alt="New Paltz Smash Club logotype" image={PosterB} w="500px"/>
-    <ImageComponent alt="New Paltz Smash Club logo" image={PosterT} w="500px"/>
-    <ImageComponent alt="New Paltz Smash Club logotype" image={PosterT} w="500px"/>
+    <ImageComponent alt="Event Poster for ray's Double Doubles" image={PosterL} w="500px"/>
+    <ImageComponent alt="Event Poster for Superstar Smashball" image={PosterB} w="500px"/>
+    <ImageComponent alt="Event Poster for Rivals of Smash Club 2" image={PosterR} w="500px"/>
+    <ImageComponent alt="Event Poster for UniTy's Stellar Starstorm" image={PosterT} w="500px"/>
 </MultiCol>
 
 <MultiCol>
     <TextBox w="800px" text="I'd like to use that last one to elaborte on the process for making an event like this as this one was my personal event that I ran with them. I handled the design of the entire event from top to bottom so let discuss all of the material I made for it."/>
+</MultiCol>
+
+<MultiCol>
+    <TextBox w="550px" text="Designing for an event like this requires a few unique things to be made. The first things you can see here are an event Icon and an event Banner. These both come together on the" head="Event Design"/>
+    <a href="https://www.start.gg/tournament/npsc-presents-unity-s-stellar-starstorm/details" style="color: var(--color-background); text-decoration: none; padding: 10px; background-color: var(--color-accent);">Event Page</a>
+</MultiCol>
+
+<MultiCol mw="1200px">
+    <ImageComponent alt="Event Icon for UniTy's Stellar Starstorm" image={UIcon} w="350px"/>
+    <ImageComponent alt="Event Banner for UniTy's Stellar Starstorm" image={UBanner} w="700px"/>
+</MultiCol>
+
+<MultiCol mw="1200px">
+    <TextBox w="700px" text="The next thing to consider for an event like this is the stream layout. For events like this being streamed its important for information to be conveyed to the viewer live. You can see my stream layout in use here along with a transition I made to switch between scenes you can see the rest of the stream..."/>
+    <a href="https://youtu.be/XgSLYpIMshY" style="color: var(--color-background); text-decoration: none; padding: 10px; background-color: var(--color-accent);">Posted Here</a>
+    <ImageComponent alt="Stream Layout example for UniTy's Stellar Starstorm" image={Stream} w="500px"/>
+    <ImageComponent alt="Stream Transition for UniTy's Stellar Starstorm" image={Transition} w="500px"/>
 </MultiCol>
 
 </Container>

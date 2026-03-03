@@ -2,6 +2,8 @@
 import Container from "@components/Container.astro";
 import Layout from "@layouts/Layout.astro";
 import TyLogo from "@assets/images/tyAbout.JPG";
+import TyDraw from "@assets/images/tyLogo.png";
+import TyOld from "@assets/images/oldLogo.png";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
 ---
@@ -10,6 +12,7 @@ import { Image } from "astro:assets";
   <nav>
     <div class="navR">
       <a class="navItm" href="/">Portfolio</a>
+      <a class="navItm" href="/about">About Me</a>
       <a class="navItm">Contact Me!</a>
     </div>
   </nav>
@@ -51,10 +54,10 @@ import { Image } from "astro:assets";
       </div>
 
       <div class="workFor">
-        <Image alt="a picture of me" src={TyLogo} width="300" class="aImg"/>
-        <Image alt="a picture of me" src={TyLogo} width="300" class="aImg"/>
-        <Image alt="a picture of me" src={TyLogo} width="300" class="aImg"/>
-        <Image alt="a picture of me" src={TyLogo} width="300" class="aImg"/>
+        <Image alt="a picture of me" src={TyDraw} width="300" class="aImg"/>
+        <Image alt="a picture of me" src={TyDraw} width="300" class="aImg"/>
+        <Image alt="a picture of me" src={TyDraw} width="300" class="aImg"/>
+        <Image alt="a picture of me" src={TyDraw} width="300" class="aImg"/>
       </div>
     </Container>
   
@@ -94,7 +97,7 @@ import { Image } from "astro:assets";
   color: var(--color-accent);
   text-decoration: none; 
 }
-.navItm:hover{ color: var(--color-background); background-color: var(--color-accent);}
+.navItm:hover{ color: var(--color-focus-ring); }
 
   .content{
     padding: 30px;
@@ -121,19 +124,6 @@ import { Image } from "astro:assets";
     text-align: center;
     text-decoration: underline;
     font-weight: 800;
-  }
-
-  .workImg{
-    max-width: 80%;
-    height: auto;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .colImg{
-    max-width: 30%;
-    height: auto;
   }
 
   .multiCol{
@@ -177,10 +167,10 @@ import { Image } from "astro:assets";
   }
 
   .aText a{padding: 20px; color: var(--color-focus-ring); background-color: var(--color-accent); text-decoration: none;}
-  .aText a:hover{padding: 20px; background-color: var(--color-background); color: var(--color-accent)}
+  .aText a:hover{padding: 20px; background-color: var(--color-background); color: var(--color-accent);}
 
   .aImg{
-    height: 400px;
+    width: 300px;
   }
 
   .about2{
