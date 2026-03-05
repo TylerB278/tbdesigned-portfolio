@@ -9,6 +9,7 @@ order: 40
 {/* using components in an MDX file */}
 import Container from '@components/Container.astro';
 import ImageComponent from '@components/ImageComponent.astro';
+import ImagePopout from '@components/ImagePopout.astro';
 import MultiCol from '@components/MultiCol.astro';
 import TextBox from '@components/TextBox.astro';
 import thumb from 'thumbnail.png'
@@ -33,8 +34,10 @@ import Transition from 'stream-transition.gif'
 
 <MultiCol mw="1200px">
     <TextBox w="400px" text="One of the first and biggest things I did for the club was a total overhaul of the logo. To the right you can see both the icon version of the logo and the longer logotype." head="Logo Redesign"/>
-    <ImageComponent alt="New Paltz Smash Club logo" image={logo} w="500px"/>
-    <ImageComponent alt="New Paltz Smash Club logotype" image={longLogo} w="900px"/>
+    <ImagePopout image={logo} galleryID="1" w="400px"/>
+    {/* <ImageComponent alt="New Paltz Smash Club logo" image={logo} w="500px"/> */}
+    <ImagePopout alt="New Paltz Smash Club logotype" image={longLogo} galleryID="1" w="500px" />
+    {/* <ImageComponent alt="New Paltz Smash Club logotype" image={longLogo} w="500px" /> */}
 </MultiCol>
 
 <MultiCol>
@@ -42,10 +45,10 @@ import Transition from 'stream-transition.gif'
 </MultiCol>
 
 <MultiCol mw="1200px">
-    <ImageComponent alt="Event Poster for ray's Double Doubles" image={PosterL} w="500px"/>
-    <ImageComponent alt="Event Poster for Superstar Smashball" image={PosterB} w="500px"/>
-    <ImageComponent alt="Event Poster for Rivals of Smash Club 2" image={PosterR} w="500px"/>
-    <ImageComponent alt="Event Poster for UniTy's Stellar Starstorm" image={PosterT} w="500px"/>
+    <ImagePopout alt="Event Poster for ray's Double Doubles" image={PosterL} galleryID="2" w="500px"/>
+    <ImagePopout alt="Event Poster for Superstar Smashball" image={PosterB} galleryID="2" w="500px"/>
+    <ImagePopout alt="Event Poster for Rivals of Smash Club 2" image={PosterR} galleryID="2" w="500px"/>
+    <ImagePopout alt="Event Poster for UniTy's Stellar Starstorm" image={PosterT} galleryID="2" w="500px"/>
 </MultiCol>
 
 <MultiCol>
@@ -58,15 +61,15 @@ import Transition from 'stream-transition.gif'
 </MultiCol>
 
 <MultiCol mw="1200px">
-    <ImageComponent alt="Event Icon for UniTy's Stellar Starstorm" image={UIcon} w="350px"/>
-    <ImageComponent alt="Event Banner for UniTy's Stellar Starstorm" image={UBanner} w="700px"/>
+    <ImagePopout alt="Event Icon for UniTy's Stellar Starstorm" image={UIcon} galleryID="3" w="350px"/>
+    <ImagePopout alt="Event Banner for UniTy's Stellar Starstorm" image={UBanner} galleryID="3" w="700px"/>
 </MultiCol>
 
 <MultiCol mw="1200px">
     <TextBox w="700px" text="The next thing to consider for an event like this is the stream layout. For events like this being streamed its important for information to be conveyed to the viewer live. You can see my stream layout in use here along with a transition I made to switch between scenes you can see the rest of the stream..."/>
     <a href="https://youtu.be/XgSLYpIMshY" style="color: var(--color-background); text-decoration: none; padding: 10px; background-color: var(--color-accent);">Posted Here</a>
-    <ImageComponent alt="Stream Layout example for UniTy's Stellar Starstorm" image={Stream} w="500px"/>
-    <ImageComponent alt="Stream Transition for UniTy's Stellar Starstorm" image={Transition} w="500px"/>
+    <ImagePopout alt="Stream Layout example for UniTy's Stellar Starstorm" image={Stream} galleryID="3" w="500px"/>
+    <ImagePopout alt="Stream Transition for UniTy's Stellar Starstorm" image={Transition} galleryID="3" w="500px"/>
 </MultiCol>
 
 <MultiCol mw="1200px">
@@ -76,7 +79,7 @@ import Transition from 'stream-transition.gif'
 
 <MultiCol mw="1200px">
     <TextBox w="400px" text="And lastly I made special pins to give to people that attended the event and winners og the individual events we were holding"/>
-    <ImageComponent alt="Stream Layout example for UniTy's Stellar Starstorm" image={UPinPhoto} w="500px"/>
+    <ImagePopout alt="Physical pins for UniTy's Stellar Starstorm" image={UPinPhoto} galleryID="3" w="500px"/>
 </MultiCol>
 
 </Container>

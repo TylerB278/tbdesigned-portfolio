@@ -9,6 +9,7 @@ order: 30
 {/* using components in an MDX file */}
 import Container from '@components/Container.astro';
 import ImageComponent from '@components/ImageComponent.astro';
+import ImagePopout from '@components/ImagePopout.astro';
 import TextBox from '@components/TextBox.astro';
 import MultiCol from '@components/MultiCol.astro';
 import thumb from 'thumbnail.png'
@@ -26,7 +27,9 @@ import lootsBox from 'streamloots-box.png'
 
 <Container>
 
-<ImageComponent alt="thumbnail image" image={thumb} w="800px"/>
+<MultiCol>
+<ImagePopout alt="thumbnail image" image={thumb} w="800px"/>
+</MultiCol>
 
 <MultiCol mw="1200px">
     <TextBox w="800px" text="I have worked with the streamer Redmaster on multiple occasions to create more of a brand identity for him and help him promote himself to new audiences!" />
@@ -50,13 +53,15 @@ import lootsBox from 'streamloots-box.png'
     <TextBox w="600px" text="The next set of graphics I also made as rewards for his viewers, they are design templates for a set of digital cards he would give out as rewards to his viewers for a certain donation reward. They were organized in the categories of Common, Rare, Epic and Legendary and so I made card templates for each rarity. I also made a chest icon with his branding to help him promote the campaign." head="Streamloots Cards" />
 </MultiCol>
 
-<ImageComponent alt="Stream loots common card" image={lootsBox} w="1200px"/>
+<MultiCol>
+    <ImagePopout alt="Stream loots box icon" image={lootsBox} galleryID="2" w="1200px"/>
+</MultiCol>
 
 <MultiCol mw="1200px">
-    <ImageComponent alt="Stream loots common card" image={lootsC} w="500px"/>
-    <ImageComponent alt="Stream loots rare card" image={lootsR} w="500px"/>
-    <ImageComponent alt="Stream loots epic card" image={lootsE} w="500px"/>
-    <ImageComponent alt="Stream loots legendary card" image={lootsL} w="500px"/>
+    <ImagePopout alt="Stream loots common card" image={lootsC} galleryID="2" w="500px"/>
+    <ImagePopout alt="Stream loots rare card" image={lootsR} galleryID="2" w="500px"/>
+    <ImagePopout alt="Stream loots epic card" image={lootsE} galleryID="2" w="500px"/>
+    <ImagePopout alt="Stream loots legendary card" image={lootsL} galleryID="2" w="500px"/>
 </MultiCol>
 
 </Container>

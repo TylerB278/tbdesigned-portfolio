@@ -1,11 +1,14 @@
 ---
 import Image from "astro/components/Image.astro";
+import { getImage } from "astro:assets";
 
+const { props } = Astro;
 const { image } = Astro.props;
 const { alt } = Astro.props;
 const { w } = Astro.props;
 
 ---
+
 <div class="imgFit">
   <Image class="image-component" alt=`${alt}` src={image} style=`width: ${w}`/>
 </div>
@@ -18,7 +21,7 @@ const { w } = Astro.props;
     margin: 0 auto;
     transition: all 0.2s;
     /* max-width: 400px; */
-  } .image-component:hover{ scale: 103%; }
+  }
 
   @media(max-width: 850px){
     .imgFit{

@@ -8,6 +8,7 @@ order: 20
 
 import Container from '@components/Container.astro';
 import ImageComponent from '@components/ImageComponent.astro';
+import ImagePopout from '@components/ImagePopout.astro';
 import TextBox from '@components/TextBox.astro'
 import MultiCol from '@components/MultiCol.astro';
 import S11PR from 's11-fullPR.png';
@@ -32,20 +33,20 @@ import thumb from 'thumbnail.png';
 
 <MultiCol mw="1500px">
         <TextBox w="400px" text="For the first step I'd import the models into blender and pose them how I'd like for each character, in the end it would look like this:" head="Model Posing" />
-        <ImageComponent alt="Season 13 blender example" image={S13B} w="450px" />
-        <ImageComponent alt="Season 11 blender example" image={S11B} w="350px" />
+        <ImagePopout alt="Season 13 blender example" image={S13B} galleryID="1" w="450px" />
+        <ImagePopout alt="Season 11 blender example" image={S11B} galleryID="1" w="350px" />
 </MultiCol>
 
 <MultiCol mw="1500px">
         <TextBox w="400px" text="For the next step I'd do any texturing, lighting, and editing of the model in order to produce the final 3D render to move into the next step, here is how those would turn out:" head="Shading & Rendering" />
-        <ImageComponent alt="Season 13 blender render" image={S13R} w="400px" />
-        <ImageComponent alt="Season 11 blender render" image={S11R} w="400px" />
+        <ImagePopout alt="Season 13 blender render" image={S13R} galleryID="2" w="400px" />
+        <ImagePopout alt="Season 11 blender render" image={S11R} galleryID="2" w="400px" />
 </MultiCol>
 
 <MultiCol mw="1500px">
         <TextBox w="400px" text="From there I bring the renders into Illustrator to create the unique style of each power ranking, here is what it looks like:" head="Design Style Implementation"/>
-        <ImageComponent alt="Season 13 illustration" image={S13I} w="400px" />
-        <ImageComponent alt="Season 11 illustration" image={S11I} w="400px" />
+        <ImagePopout alt="Season 13 illustration" image={S13I} galleryID="3" w="400px" />
+        <ImagePopout alt="Season 11 illustration" image={S11I} galleryID="3" w="400px" />
 </MultiCol>
 
 <MultiCol>
@@ -53,16 +54,16 @@ import thumb from 'thumbnail.png';
 </MultiCol>
 
 <MultiCol>
-        <ImageComponent alt="Rankings Graphic made for Contender's 13th Season" image={S13PR} w="1200px"/>
-        <ImageComponent alt="Rankings Graphic made for Contender's 11th Season" image={S11PR} w="1200px"/>
+        <ImagePopout alt="Rankings Graphic made for Contender's 13th Season" image={S13PR} galleryID="4" w="1200px"/>
+        <ImagePopout alt="Rankings Graphic made for Contender's 11th Season" image={S11PR} galleryID="4" w="1200px"/>
 </MultiCol>
 
 <MultiCol mw="1500px">
         <TextBox w="400px" text="Additionally along with each graphic I went beyond to create supplementary rewards for each of the player who made it on the rankings!"/>
-        <ImageComponent alt="Render of the poster reward for Contender's 11th Season" image={S11ER} w="350px"/>
-        <ImageComponent alt="Physical print of the poster reward for Contender's 11th Season" image={S11EP} w="500px"/>
-        <ImageComponent alt="Render of the polaroid reward for Contender's 13th Season" image={S13ER} w="500px"/>
-        <ImageComponent alt="Physical prints of the polaroid reward for Contender's 13th Season" image={S13EP} w="600px"/>
+        <ImagePopout alt="Render of the poster reward for Contender's 11th Season" image={S11ER} galleryID="5" w="350px"/>
+        <ImagePopout alt="Physical print of the poster reward for Contender's 11th Season" image={S11EP} galleryID="5" w="500px"/>
+        <ImagePopout alt="Render of the polaroid reward for Contender's 13th Season" image={S13ER} galleryID="5" w="500px"/>
+        <ImagePopout alt="Physical prints of the polaroid reward for Contender's 13th Season" image={S13EP} galleryID="5" w="600px"/>
 </MultiCol>
 
 </Container>
