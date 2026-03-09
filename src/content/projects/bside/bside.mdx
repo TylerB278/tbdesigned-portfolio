@@ -8,6 +8,7 @@ order: 10
 
 import Container from '@components/Container.astro';
 import ImageComponent from '@components/ImageComponent.astro';
+import ImagePopout from '@components/ImagePopout.astro';
 import TextBox from '@components/TextBox.astro';
 import MultiCol from '@components/MultiCol.astro';
 import BsideIn from 'bside-in.jpg';
@@ -31,7 +32,7 @@ import OldLogo from 'bside-oldlogo.jpg';
     And so I took it upon myself to give this logo and some of their other branding a touch up to reflect how they theme their establishment." />
     <ImageComponent alt="Image of the outside of B-Side Grill" image={BsideOut} w="400px" />
     <ImageComponent alt="Image of the inside of B-Side Grill" image={BsideIn} w="500px" />
-    <ImageComponent alt="Image of the inside of B-Side Grill" image={OldLogo} w="300px" />
+    <ImageComponent alt="Image of B-Side Grill's old logo" image={OldLogo} w="300px" />
 </MultiCol>
 
 <MultiCol>
@@ -44,8 +45,8 @@ import OldLogo from 'bside-oldlogo.jpg';
 </MultiCol>
 
 <MultiCol>
-    <ImageComponent alt="Image of the outside of B-Side Grill" image={BsideRedesign} w="600px" />
-    <ImageComponent alt="Image of the inside of B-Side Grill" image={BsideRedesignBW} w="600px" />
+    <ImagePopout alt="Image of my redesigned B-Side Grill logo" image={BsideRedesign} w="600px" galleryID="1"/>
+    <ImagePopout alt="Image of my redesigned B-Side Grill logo in black and white" image={BsideRedesignBW} w="600px" galleryID="1"/>
 </MultiCol>
 
 <MultiCol>
@@ -53,8 +54,8 @@ import OldLogo from 'bside-oldlogo.jpg';
 </MultiCol>
 
 <MultiCol>
-    <ImageComponent alt="Image of the outside of B-Side Grill" image={BsideMenu} w="500px" />
-    <ImageComponent alt="Image of the inside of B-Side Grill" image={BsideMug} w="600px" />
+    <ImagePopout alt="Image of a mockup for a menu page" image={BsideMenu} w="500px" galleryID="2"/>
+    <ImagePopout alt="Image of a mockup for a mug with the new logo" image={BsideMug} w="600px" galleryID="2"/>
 </MultiCol>
 
 </Container>

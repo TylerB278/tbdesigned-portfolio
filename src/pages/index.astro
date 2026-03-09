@@ -21,7 +21,7 @@ import PersonalWork from "@components/PersonalWork.astro";
     <div class="navR prevent-select">
       <a class="navItm" href="#top">Portfolio</a>
       <a class="navItm" href="/about">About Me</a>
-      <a class="navItm" href="https://t-boggi-linktree.netlify.app/">Contact Me!</a>
+      <a class="navItm" href="/contact">Contact Me!</a>
     </div>
   </nav>
   <Container>
@@ -101,7 +101,7 @@ nav{
   border-bottom: 5px solid var(--color-focus-ring);
   background-color: var(--color-background);
   width: 100%;
-  height: 9vh;
+  height: 80px;
   z-index: 1000
 }
 
@@ -309,5 +309,34 @@ nav{
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
   }
+
+  @media(max-width: 800px){
+    .sectH{
+      font-size: 48pt;
+    }
+    .about{
+      flex-flow: column-reverse wrap;
+      height: fit-content;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    .aText{
+      max-width: 500px;
+      text-align: center;
+    }
+    .about a{
+      align-self: center;
+    }
+    .about h2{
+      justify-self: center;
+    }
+    nav{
+      height: 50px;
+    }
+    .navItm{
+      font-size: 20px;
+    }
+  }
+
 
 </style>

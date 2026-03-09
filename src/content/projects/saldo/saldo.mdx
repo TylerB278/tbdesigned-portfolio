@@ -8,6 +8,7 @@ order: 20
 
 import Container from '@components/Container.astro';
 import ImageComponent from '@components/ImageComponent.astro';
+import ImagePopout from '@components/ImagePopout.astro';
 import TextBox from '@components/TextBox.astro';
 import MultiCol from '@components/MultiCol.astro';
 import Thumb from 'thumbnail.png';
@@ -23,8 +24,8 @@ import sIcon from 's-icon-logo.png';
 </MultiCol>
 
 <MultiCol mw="1500px">
-    <ImageComponent alt="Poster advertising the intramural leagues being offered" image={sFull} w="800px"/>
-    <ImageComponent alt="Poster advertising the imleagues intramural app" image={sIcon} w="400px"/>
+    <ImagePopout alt="Full logotype for Saldo" image={sFull} w="800px" galleryID="1" />
+    <ImagePopout alt="Icon logo for Saldo" image={sIcon} w="400px" galleryID="1" />
 </MultiCol>
 
 <MultiCol mw="1200px">
@@ -33,8 +34,8 @@ import sIcon from 's-icon-logo.png';
 
 <MultiCol mw="1500px">
     <TextBox w="400px" text="Here you can see how I applied my branding to some promotional material, for both physical and digital formats" head="Promotional Material"/>
-    <ImageComponent alt="Poster advertising the intramural leagues being offered" image={carAD} w="400px"/>
-    <ImageComponent alt="Poster advertising the imleagues intramural app" image={Trifold} w="500px"/>
+    <ImagePopout alt="Poster advertising the intramural leagues being offered" image={carAD} w="400px" galleryID="2" />
+    <ImagePopout alt="Poster advertising the imleagues intramural app" image={Trifold} w="500px" galleryID="2" />
 </MultiCol>
 
 </Container>

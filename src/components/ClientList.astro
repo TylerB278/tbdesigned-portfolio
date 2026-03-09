@@ -153,6 +153,7 @@ const sortedProjects = allProjects.sort((a,b) => {
     padding-left: 20px;
     padding-bottom: 10px;
     margin-top: -8px;
+    font-size: 16px;
   }
 
   .bottomCard h2,a:hover{  }
@@ -163,11 +164,22 @@ const sortedProjects = allProjects.sort((a,b) => {
     background-size: 100%;
   }
 
-  @media(max-width:800px){ 
-    .projectCard:after {content: none;} 
-    .projectCard{align-self: center;}
-    .bottomCard{align-self: center; margin-left: 0px;}
-    .click{ position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+  @media(max-width:530px){ 
+    .projectCard{
+      width: 333.33px;
+      height: 200px;
+    }
+    .cardOverlay{
+    width: 280px;
+    height: 200px;
+    }
+    .bottomCard h2{
+      font-size: 22px;
+      width: 350px;
+    } .bottomCard p{ width: 350px; }
+    .bottomCard{
+      width: 350px;
+    }
   }
 
 </style>
