@@ -9,6 +9,7 @@ order: 40
 {/* using components in an MDX file */}
 import Container from '@components/Container.astro';
 import ImageComponent from '@components/ImageComponent.astro';
+import Button from '@components/Button.astro';
 import ImagePopout from '@components/ImagePopout.astro';
 import MultiCol from '@components/MultiCol.astro';
 import TextBox from '@components/TextBox.astro';
@@ -57,7 +58,7 @@ import Transition from 'stream-transition.gif'
 
 <MultiCol>
     <TextBox w="550px" text="Designing for an event like this requires a few unique things to be made. The first things you can see here are an event Icon and an event Banner. These both come together on the..." head="Event Design"/>
-    <a href="https://www.start.gg/tournament/npsc-presents-unity-s-stellar-starstorm/details" style="color: var(--color-background); text-decoration: none; padding: 10px; background-color: var(--color-accent);">Event Page</a>
+    <Button link="https://www.start.gg/tournament/npsc-presents-unity-s-stellar-starstorm/details" t="Event Page" />
 </MultiCol>
 
 <MultiCol mw="1200px">
@@ -66,8 +67,8 @@ import Transition from 'stream-transition.gif'
 </MultiCol>
 
 <MultiCol mw="1200px">
-    <TextBox w="700px" text="The next thing to consider for an event like this is the stream layout. For events like this being streamed its important for information to be conveyed to the viewer live. You can see my stream layout in use here along with a transition I made to switch between scenes you can see the rest of the stream..."/>
-    <a href="https://youtu.be/XgSLYpIMshY" style="color: var(--color-background); text-decoration: none; padding: 10px; background-color: var(--color-accent);">Posted Here</a>
+    <TextBox w="700px" text="The next thing to consider for an event like this is the stream layout. For events like this being streamed its important for information to be conveyed to the viewer live. You can see my stream layout in use here along with a transition I made to switch between scenes, you can see the rest of the stream..."/>
+    <Button link="https://youtu.be/XgSLYpIMshY" t="Posted Here" />
     <ImagePopout alt="Stream Layout example for UniTy's Stellar Starstorm" image={Stream} galleryID="3" w="500px"/>
     <ImagePopout alt="Stream Transition for UniTy's Stellar Starstorm" image={Transition} galleryID="3" w="500px"/>
 </MultiCol>

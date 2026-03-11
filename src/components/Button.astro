@@ -1,0 +1,28 @@
+---
+import Image from "astro/components/Image.astro";
+import { getImage } from "astro:assets";
+
+const { props } = Astro;
+const { link } = Astro.props;
+const { t } = Astro.props;
+
+---
+
+<a href=`${link}` class="link">{t}</a>
+
+<style>
+    .link{
+        color: var(--color-accent); 
+        text-decoration: none;
+        padding: 12px;
+        margin: 5px;
+        font-size: 24px;
+        font-weight: 600;
+        border: 5px solid var(--color-accent);
+        align-self: center;
+    }
+    .link:hover{
+        background-color: var(--color-accent);
+        color: var(--color-background);
+    }
+</style>
