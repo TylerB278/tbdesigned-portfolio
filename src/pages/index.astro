@@ -78,12 +78,10 @@ import PersonalWork from "@components/PersonalWork.astro";
   const scrollBox = document.getElementsByClassName(".scrollContain");
 
   const scrollL = function () {
-    // alert("YOU'VE BEEN CLICKED!!");
     document.getElementById('scrollContain').scrollLeft -= ((document.getElementById('scrollContain').scrollWidth)/4);
   };
 
   const scrollR = function () {
-    // alert("YOU'VE BEEN CLICKED!!");
     document.getElementById('scrollContain').scrollLeft += ((document.getElementById('scrollContain').scrollWidth)/4);
   };
 
@@ -342,7 +340,7 @@ nav{
 
     #scrollContain{
       height: 250px;
-      padding-left: 60vw;
+      padding-left: 40vw;
     }
 
     .arrowL, .arrowR{ 
@@ -350,7 +348,7 @@ nav{
       width: 50px;
       height: 50px;
       z-index: 1000;
-      transform: translateY(191px);
+      transform: translateY(217px);
     }
     .arrowL{ left: 0px; }
     .arrowR{ right: 0px; }

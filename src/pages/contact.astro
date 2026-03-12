@@ -5,6 +5,10 @@ import Instagram from "@assets/images/instagram.png";
 import Discord from "@assets/images/discord.png";
 import LinkedIn from "@assets/images/linkedin.png";
 import Twitter from "@assets/images/twitter.png";
+import InstagramY from "@assets/images/instagram_Y.png";
+import DiscordY from "@assets/images/discord_Y.png";
+import LinkedInY from "@assets/images/linkedIn_Y.png";
+import TwitterY from "@assets/images/twitter_Y.png";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
 import ImageComponent from "@components/ImageComponent.astro";
@@ -19,15 +23,28 @@ import ImageComponent from "@components/ImageComponent.astro";
     </div>
   </nav>
   <div class="contact-links">
-    <a href="https://www.instagram.com/t.b.d.esigned/" target="_blank" class="link"><ImageComponent image={Instagram} alt="Instagram contact" w="200px"/></a>
-    <a href="https://www.instagram.com/t.b.d.esigned/" target="_blank" class="link"><ImageComponent image={Discord} alt="Discord contact" w="200px"/></a>
-    <a href="https://www.linkedin.com/in/tyler-boggi-8192202a8/" target="_blank" class="link"><ImageComponent image={LinkedIn} alt="LinkedIn contact" w="200px"/></a>
-    <a href="https://x.com/UniTy2780" target="_blank" class="link"><ImageComponent image={Twitter} alt="Twitter contact" w="200px"/></a>
+    <a href="https://www.instagram.com/t.b.d.esigned/" target="_blank" class="link"><ImageComponent image={InstagramY} alt="Instagram contact" w="200px"/></a>
+    <a href="https://www.instagram.com/t.b.d.esigned/" target="_blank" class="link"><ImageComponent image={DiscordY} alt="Discord contact" w="200px"/></a>
+    <a href="https://www.linkedin.com/in/tyler-boggi-8192202a8/" target="_blank" class="link"><ImageComponent image={LinkedInY} alt="LinkedIn contact" w="200px"/></a>
+    <a href="https://x.com/UniTy2780" target="_blank" class="link"><ImageComponent image={TwitterY} alt="Twitter contact" w="200px"/></a>
   </div>
     <Container>
-        <div class="form">
-            Contact
+      <form action="https://api.web3forms.com/submit" method="POST" class="form">
+        <input type="hidden" name="access_key" value="b8a88c5d-c7c8-48fe-b9e0-feaac6584388">
+        <div class="textgroup">
+          <h3>Name</h3>
+          <input type="text" name="name" required class="input">
         </div>
+        <div class="textgroup">
+          <h3>Email</h3>
+          <input type="email" name="email" required class="input"> 
+        </div>
+        <div class="textgroup">
+          <h3>Message</h3>
+          <textarea name="message" required class="input"></textarea>
+        </div>
+        <button type="submit" class="submit">Submit</button>
+      </form>
     </Container>
 </Layout>
 <div class="footer">© Tyler Boggi 2026</div>
@@ -109,5 +126,31 @@ import ImageComponent from "@components/ImageComponent.astro";
     }
   }
 
+  .form{
+    display: flex;
+    align-self: center;
+    gap: 20px;
+    flex-flow: column;
+    width: 300px;
+    margin: 30px;
+    color: var(--color-accent);
+  }
+
+  h3{
+    font-size: 24pt;
+  }
+
+  .input{
+    width: 300px;
+  }
+
+  .submit{
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    width: 300px;
+    height: 50px;
+    font-weight: 800;
+    border: none;
+  } .submit:hover{ background-color: var(--color-focus-ring); color: var(--color-accent); }
 
 </style>
