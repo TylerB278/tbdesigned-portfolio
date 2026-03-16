@@ -3,6 +3,8 @@ import Layout from "@layouts/Layout.astro";
 import ImageComponent from "@components/ImageComponent.astro";
 import Container from "@components/Container.astro";
 import TyLogo from "@assets/images/tyAbout.JPG";
+import TyIcon from "@assets/images/TyLogo.svg";
+import TyWord from "@assets/images/TBDesigned.svg";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
 import ProjectList from "@components/ProjectList.astro";
@@ -13,7 +15,9 @@ import PersonalWork from "@components/PersonalWork.astro";
 <Layout title="T.B.Designed">
   <div class="heroSect">
     <!-- <h1 class="title th1">Tyler Boggi</h1> -->
-     <video width="1500" height="800" autoplay="autoplay" src="tyHeader.webm" class="timg" />
+     <!-- <video width="1500" height="800" autoplay="autoplay" src="tyHeader.webm" class="timg" /> -->
+    <Image src={TyIcon} alt="My Logo" class="headerAnim icon"/>
+    <Image src={TyWord} alt="My Logo" class="headerAnim word"/>
     <!-- <img src="/tyHeader.webm" class="timg"></img> -->
     <!-- <h2 class="title th2">Graphic Designer</h2> -->
   </div>
@@ -133,14 +137,75 @@ nav{
 .heroSect{
   /* position: sticky;
   top: 10%; */
-  /* width: 100%; */
-  background-color: black;
-  height: 100vh;
-  z-index: -100;
-  align-content: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: var(--color-background);
+  height: 100vh;
+  max-height: 180vw;
+  z-index: -100;
   overflow: hidden;
 }
+
+.headerAnim{
+  position: relative;
+  background-origin: center;
+  transform-origin: center;
+}
+.icon{
+  right: -25vw;
+  z-index: 10;
+  width: 36vw;
+  animation-duration: 2s;
+  animation-name: iconAnim;
+  animation-fill-mode: both;
+}
+@keyframes iconAnim{
+  0% { 
+    rotate: -120deg;
+    scale: 0%;
+    transform: translateX(0%);
+  }
+  50% { 
+    rotate: -360deg;
+    scale: 100%;
+    transform: translateX(0%);
+  }
+  100% { 
+    rotate: -360deg;
+    scale: 100%;
+    transform: translateX(-20vw);
+  }
+}
+.word{
+  /* left: 10%; */
+  top: 2.5vw;
+  left: -35.2vw;
+  width: 50vw;
+  animation-duration: 2s;
+  animation-name: wordAnim;
+  animation-fill-mode: both;
+}
+@keyframes wordAnim{
+  0% { 
+    transform: translateX(0%);
+    clip-path: inset(0 0 0 100%);
+  }
+  50% { 
+    transform: translateX(0%);
+    clip-path: inset(0 0 0 100%);
+  }
+  90%{
+    clip-path: inset(0 0 0 0);
+  }
+  100% { 
+    transform: translateX(31vw);
+  }
+}
+
+
 
 .title{
 
