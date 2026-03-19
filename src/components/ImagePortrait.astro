@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
+const { props } = Astro;
+
+const { w } = Astro.props;
+
+import TyNorm from "@assets/images/tyMainPhoto.png";
+import TySilly from "@assets/images/tySillyPhoto.png";
+
+---
+
+<div class="person-contain">
+  <a class="people-card" href="">
+    <div class="portrait">
+      <Image class="people-card-image" src={TyNorm} alt="alt text" width={w} />
+      <Image class="people-card-image-alt" src={TySilly} alt="alt text" width={w} />
+    </div>
+  </a>
+</div>
+
+<style>
+  .portrait{
+    /* outline-width: 3px;
+    outline-bottom-width: 0px;
+    outline-style: solid;
+    outline-color: var(--color-accent-a); */
+    background: linear-gradient(var(--color-background), var(--color-accent));
+  }
+
+  .people-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    position: relative;
+    /* background-color: var(--color-background-transparent); */
+  }
+  .people-card-image,
+  .people-card-image-alt {
+    width: 100%;
+    height: auto;
+    transform-origin: bottom center;
+  }
+  .people-card-image-alt {
+    position: absolute;
+    transform: scale(105%);
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+  .person-contain:hover .people-card-image-alt,
+  .person-contain:focus-visible .people-card-image-alt {
+    opacity: 1;
+    transform: scale(115%);
+    transition: transform 0.3s;
+  }
+  .person-contain:hover .people-card-image,
+  .person-contain:focus-visible .people-card-image{
+    opacity: 0;
+  }
+
+
+  .people-card:hover .people-card-name,
+  .people-card:focus-visible .people-card-name {
+    color: var(--color-accent);
+  }
+</style>
