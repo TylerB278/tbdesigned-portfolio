@@ -13,7 +13,6 @@
     "@fontsource/karla": "^5.2.8",
     "astro": "^5.14.1",
     "glightbox": "^3.3.1",
-    "n": "^10.2.0",
     "sharp": "^0.34.5",
     "stable": "^0.1.8"
   }
