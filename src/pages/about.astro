@@ -2,6 +2,7 @@
 import Container from "@components/Container.astro";
 import Layout from "@layouts/Layout.astro";
 import TyLogo from "@assets/images/tyAbout.JPG";
+import TyNorm from "@assets/images/tyNorm-bg.png";
 import TyHeader from "@assets/images/tyHeader.gif";
 import TyDraw from "@assets/images/tyLogo.png";
 import AWC from "@assets/images/AWClogoBW.png";
@@ -30,7 +31,7 @@ import { Image } from "astro:assets";
           <h2>About Me!</h2>
           <p>Hi! my name is Tyler Boggi, I am a graphic designer specializing in branding and web design/development! I graduated from SUNY New Paltz with a BFA in Graphic Design. My passion for creating comes from the desire to make designs that persuade. I love to make works that grab viewers visually and get them to truly consider what is being offered or shown to them. I strive to make works that look stunning while not sacrificing on their purpose. </p>
         </div>
-        <Image alt="a picture of me" src={TyLogo} width="300" class="aImg"/>
+        <Image alt="a picture of me" src={TyNorm} class="aImg"/>
       </div>
 
       <div class="about2">
@@ -188,9 +189,7 @@ import { Image } from "astro:assets";
   .aText a:hover{padding: 20px; background-color: var(--color-background); color: var(--color-accent);}
 
   .aImg{
-    max-width: 300px;
-    height: fit-content;
-    flex-shrink: 1;
+    width: 350px;
   }
   
   .wImg{

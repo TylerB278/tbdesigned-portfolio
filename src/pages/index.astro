@@ -7,7 +7,7 @@ import TyLogo from "@assets/images/tyAbout.JPG";
 import Peter from "/Peter_Placeholder.png";
 import TyIcon from "@assets/images/TyLogo.svg";
 import TyWord from "@assets/images/TBDesigned.svg";
-import TyNorm from "@assets/images/tyMainPhoto.png";
+import TyNorm from "@assets/images/tyNorm-bg.png";
 import TySilly from "@assets/images/tySillyPhoto.png";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
@@ -43,8 +43,8 @@ import PersonalWork from "@components/PersonalWork.astro";
       <p>Hello, my name is Tyler Boggi! I am a graphic designer specializing in branding and web design/development! I am a graduate from SUNY New Paltz with several years of professtional Design under my belt! If you'd like to learn more about me check out my...</p>
       <a href="/about">About me page</a>
     </div>
-    <!-- <ImagePortrait /> -->
-    <Image alt="a picture of me" src={TyLogo} width="300" class="aImg"/>
+    <Image alt="a picture of me" src={TyNorm} class="aImg"/>
+    <!-- <Image alt="a picture of me" src={TyLogo} width="300" class="aImg"/> -->
   </div>
 
   <div class="sep"></div>
@@ -255,7 +255,7 @@ nav{
 }
 
 .aImg{
-  height: 400px;
+  width: 300px;
 }
 
 .pers{ font-size: 60pt; width: 600px;}
