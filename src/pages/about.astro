@@ -19,8 +19,8 @@ import { Image } from "astro:assets";
   <nav>
     <div class="navR">
       <a class="navItm" href="/">Portfolio</a>
-      <a class="navItm" href="/about">About Me</a>
-      <a class="navItm" href="/contact">Contact Me!</a>
+      <a class="navItm" href="/about">About</a>
+      <a class="navItm" href="/contact">Contact</a>
     </div>
   </nav>
     <Container>
@@ -43,27 +43,27 @@ import { Image } from "astro:assets";
         </div>
       </div>
 
-      <div class="workFor">
+      <!-- <div class="workFor">
         <Image alt="a picture of me" src={AWC} width="300" class="wImg"/>
         <Image alt="a picture of me" src={CHV} width="300" class="wImg"/>
         <Image alt="a picture of me" src={NewPaltz} width="300" class="wImg"/>
         <Image alt="a picture of me" src={Red} width="300" class="wImg"/>
-      </div>
+      </div> -->
 
       <div class="about3">
         <div class="aText">
           <h2>My Branding & Website</h2>
           <p style="margin-bottom: 20px;">To include this here for those still interested my branding and this website were all personally made by me!</p>
-          <p style="margin-bottom: 20px;">For the website I built it using HTML & CSS coding. I used Javascript to implement all of the interaction and more in depth animation like the nav bar and project carousel. All of this was done with Astro and their content collection framework in order to put it all together in a functioning website. It was then deployed using Netlify and I used Prokbun for the domain</p>
+          <p style="margin-bottom: 20px;">For the website I built it using HTML & CSS coding from the ground up. I used Javascript to implement all of the interaction and more in depth animation like the nav bar and project carousel. All of this was done with Astro and their content collection framework in order to put it all together in a functioning website. It was then deployed using Netlify DNS hosting with Prokbun for the domain</p>
           <p>For my personal branding I've always been iterating and changing it as my own cartoony drawing style and my physical appearance changed with time. You can see this progression below.</p>
-          <p>You can also see the animation I made to show the new logo/logotype!</p>
+          <p>Along with this I made black and white variations, guidelines for my brand, and even the animation you saw on the homepage!</p>
         </div>
-        <Image alt="a picture of me" src={TyHeader} width="800" class="gif"/>
+        <Image alt="a picture of me" src={LogoT} width="600" style="padding: 20px; "/>
       </div>
 
-      <div class="workFor">
+      <!-- <div class="workFor">
         <Image alt="a picture of me" src={LogoT} width="900" style="padding: 20px; "/>
-      </div>
+      </div> -->
     </Container>
   
 </Layout>
@@ -174,7 +174,7 @@ import { Image } from "astro:assets";
   height: fit-content;
   background-color: var(--color-accent);
   padding: 40px;
-  margin-top: 0px;
+  margin-top: 80px;
   }
   .about p {color: var(--color-background); margin-bottom: 40px;} .about h2{margin-bottom: 10px; color: var(--color-background); justify-content: flex-start; }
   .about3 p {color: var(--color-background); margin-bottom: 40px; text-align: left; } .about3 h2{margin-bottom: 10px; color: var(--color-background); justify-content: flex-start; font-size: 26px; }

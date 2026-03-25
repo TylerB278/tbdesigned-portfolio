@@ -24,17 +24,21 @@ import PersonalWork from "@components/PersonalWork.astro";
     <Image src={TyWord} alt="My Logo" class="headerAnim word"/>
     <!-- <img src="/tyHeader.webm" class="timg"></img> -->
     <!-- <h2 class="title th2">Graphic Designer</h2> -->
+    <a id="seeContent" href="#top">
+      <p>See page content</p>
+      <p style="font-size: 32px; line-height: 0.8;">v</p>
+    </a>
   </div>
   <nav id="navtop">
     <div class="navR prevent-select">
       <a class="navItm" href="#top">Portfolio</a>
-      <a class="navItm" href="/about">About Me</a>
-      <a class="navItm" href="/contact">Contact Me!</a>
+      <a class="navItm" href="/about">About</a>
+      <a class="navItm" href="/contact">Contact</a>
     </div>
   </nav>
   <Container>
   
-  <div class="gap"></div>
+  <!-- <div class="gap"></div>
   <div class="sep"></div>
 
   <div class="about">
@@ -44,8 +48,8 @@ import PersonalWork from "@components/PersonalWork.astro";
       <a href="/about">About me page</a>
     </div>
     <Image alt="a picture of me" src={TyNorm} class="aImg"/>
-    <!-- <Image alt="a picture of me" src={TyLogo} width="300" class="aImg"/> -->
-  </div>
+    <Image alt="a picture of me" src={TyLogo} width="300" class="aImg"/>
+  </div> -->
 
   <div class="sep"></div>
 
@@ -74,11 +78,14 @@ import PersonalWork from "@components/PersonalWork.astro";
 <script>
   window.addEventListener('scroll', function() {
   const navbar = document.getElementById('navtop');
-  if (window.scrollY > 120) // Shows after 100px of scrolling
+  const seeContent = document.getElementById('seeContent');
+  if (window.scrollY > 20) // Shows after 100px of scrolling
   { 
     navbar?.classList.add('show');
+    seeContent?.classList.add('hide');
   } else {
     navbar?.classList.remove('show');
+    seeContent?.classList.remove('hide');
   }
 });
 
@@ -212,6 +219,20 @@ nav{
   }
 }
 
+#seeContent{
+  position: absolute;
+  top: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 800;
+  opacity: 100%;
+  transition: all 0.3s;
+} 
+#seeContent.hide{ opacity: 0%; }
+#seeContent:hover{ color: var(--color-focus-ring); }
 
 
 .title{

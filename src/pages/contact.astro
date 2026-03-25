@@ -18,46 +18,46 @@ import ImageComponent from "@components/ImageComponent.astro";
   <nav>
     <div class="navR">
       <a class="navItm" href="/">Portfolio</a>
-      <a class="navItm" href="/about">About Me</a>
-      <a class="navItm" href="/contact">Contact Me!</a>
+      <a class="navItm" href="/about">About</a>
+      <a class="navItm" href="/contact">Contact</a>
     </div>
   </nav>
+  <Container>
+    <form action="https://api.web3forms.com/submit" method="POST" class="form">
+      <input type="hidden" name="access_key" value="b8a88c5d-c7c8-48fe-b9e0-feaac6584388">
+      <div class="textgroup">
+        <h3>Name</h3>
+        <input type="text" name="name" required class="input">
+      </div>
+      <div class="textgroup">
+        <h3>Email</h3>
+        <input type="email" name="email" required class="input"> 
+      </div>
+      <div class="textgroup">
+        <h3>Message</h3>
+        <textarea name="message" required class="input"></textarea>
+      </div>
+      <button type="submit" class="submit">Submit</button>
+    </form>
+  </Container>
   <div class="contact-links">
     <a href="https://www.instagram.com/t.b.d.esigned/" target="_blank" class="link"><ImageComponent image={InstagramY} alt="Instagram contact" w="200px"/></a>
     <a href="https://www.instagram.com/t.b.d.esigned/" target="_blank" class="link"><ImageComponent image={DiscordY} alt="Discord contact" w="200px"/></a>
     <a href="https://www.linkedin.com/in/tyler-boggi-8192202a8/" target="_blank" class="link"><ImageComponent image={LinkedInY} alt="LinkedIn contact" w="200px"/></a>
     <a href="https://x.com/UniTy2780" target="_blank" class="link"><ImageComponent image={TwitterY} alt="Twitter contact" w="200px"/></a>
   </div>
-    <Container>
-      <form action="https://api.web3forms.com/submit" method="POST" class="form">
-        <input type="hidden" name="access_key" value="b8a88c5d-c7c8-48fe-b9e0-feaac6584388">
-        <div class="textgroup">
-          <h3>Name</h3>
-          <input type="text" name="name" required class="input">
-        </div>
-        <div class="textgroup">
-          <h3>Email</h3>
-          <input type="email" name="email" required class="input"> 
-        </div>
-        <div class="textgroup">
-          <h3>Message</h3>
-          <textarea name="message" required class="input"></textarea>
-        </div>
-        <button type="submit" class="submit">Submit</button>
-      </form>
-    </Container>
 </Layout>
 <div class="footer">© Tyler Boggi 2026</div>
 
 <style>
   
   .contact-links{   
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     max-width: 600px;
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom: 40px;
+    gap: 20px;
   }
 
   .link{
