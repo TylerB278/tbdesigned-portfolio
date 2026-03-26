@@ -12,5 +12,27 @@ import ImagePopout from '@components/ImagePopout.astro';
 import TextBox from '@components/TextBox.astro';
 import MultiCol from '@components/MultiCol.astro';
 
-<a href="https://illustrate-esports.netlify.app/" target="_blank">See Website Here</a>
+import Thumb from 'thumbnail.png';
 
+<Container>
+
+<MultiCol mw="800px">
+  <TextBox w="750px" text="
+    This is my BFA Graphic Design Thesis Project, Esports Visualized!
+    The project is currently a work in progress but here is a preview.
+    Esports Visualized is about showcaseing what it is like to do Graphic Design in teh industry of competitive gaming, or Esports!
+    The project covers 3 common design industries and how they are applied into the space of Esports Graphic Design.
+    I cover all of the unique and interesting aspects of the field that differ from other areas of design.
+    If you'd like to see the project live it will be shown at the SUNY New Paltz Design Show 26, held in Wooster Hall on May 1st from 4pm to 7pm!
+    You can also see some of my current finalized work and the in-progress website at the link below!" />
+    <a href="https://illustrate-esports.netlify.app/" target="_blank" style="color: var(--color-accent); font-size: 32px; text-decoration: none; " >See Website Here</a>
+</MultiCol>
+
+<MultiCol mw="1200px">
+    <ImagePopout alt="Test" image={Thumb} w="500px" galleryID="1"/>
+    <ImagePopout alt="Test" image={Thumb} w="500px" galleryID="1"/>
+    <ImagePopout alt="Test" image={Thumb} w="500px" galleryID="1"/>
+    <ImagePopout alt="Test" image={Thumb} w="500px" galleryID="1"/>
+</MultiCol>
+
+</Container>

@@ -6,4 +6,34 @@ thumbnail: thumbnail.png
 order: 40
 ---
 
-<a href="https://npds26.netlify.app/" target="_blank">Design Show Website</a>
+import Container from '@components/Container.astro';
+import ImageComponent from '@components/ImageComponent.astro';
+import ImagePopout from '@components/ImagePopout.astro';
+import TextBox from '@components/TextBox.astro';
+import MultiCol from '@components/MultiCol.astro';
+
+import Thumb from 'thumbnail.png';
+import Hover from 'hoverExample.png';
+
+<Container>
+
+<MultiCol mw="800px">
+  <TextBox w="750px" text="
+    This project is the SUNY New Paltz Design Show 2026!
+    The event is a celebration of all the graduating BFA Graphic Design and MA Digital Design & Fabrication students along with their thesis projects.
+    It will be an open forum where all the seniors get to show their projects and I worked with a team of 4 other designers to creat the branding and everything else needed ranging from catalogs, to social media, to event design.
+    My job outside of all of us working on the branding was to make the website.
+    I use CSS, HTML, and JavaScript to make it along with the tools used to make last year's show.
+    This is currently an in-progress project and if you want to see the show when it happens it will be on May 1st @ SUNY New Paltz, Wooster Hall from 4pm to 7pm.
+    You can see my current in progress work along with the website at the link below!" />
+    <a href="https://npds26.netlify.app/" target="_blank" style="color: var(--color-accent); font-size: 32px; text-decoration: none; " >See Website Here</a>
+</MultiCol>
+
+<MultiCol mw="1200px">
+    <ImagePopout alt="Test" image={Thumb} w="500px" galleryID="1"/>
+    <ImagePopout alt="Test" image={Hover} w="500px" galleryID="1"/>
+    <ImagePopout alt="Test" image={Thumb} w="500px" galleryID="1"/>
+    <ImagePopout alt="Test" image={Thumb} w="500px" galleryID="1"/>
+</MultiCol>
+
+</Container>
