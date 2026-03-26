@@ -14,6 +14,9 @@ import MultiCol from '@components/MultiCol.astro';
 
 import Thumb from 'thumbnail.png';
 import Hover from 'hoverExample.png';
+import Logo from 'showLogo.png';
+import Projects from 'homeProjects.png';
+import STD from 'saveDate.png';
 
 <Container>
 
@@ -30,10 +33,10 @@ import Hover from 'hoverExample.png';
 </MultiCol>
 
 <MultiCol mw="1200px">
-    <ImagePopout alt="Test" image={Thumb} w="500px" galleryID="1"/>
+    <ImagePopout alt="Test" image={Logo} w="500px" galleryID="1"/>
     <ImagePopout alt="Test" image={Hover} w="500px" galleryID="1"/>
-    <ImagePopout alt="Test" image={Thumb} w="500px" galleryID="1"/>
-    <ImagePopout alt="Test" image={Thumb} w="500px" galleryID="1"/>
+    <ImagePopout alt="Test" image={Projects} w="500px" galleryID="1"/>
+    <ImagePopout alt="Test" image={STD} w="450px" galleryID="1"/>
 </MultiCol>
 
 </Container>
