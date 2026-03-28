@@ -4,6 +4,7 @@ import SkipLink from "@components/SkipLink.astro";
 import CSSReset from "../global/CSSReset.astro";
 import Theme from "../global/Theme.astro";
 
+let fullTitle = title + " | Tyler Boggi"
 // This file creates the basic HTML page structure and sets up our CSS reset and theme. We will use this Layout component in all of our pages.
 ---
 
@@ -16,7 +17,7 @@ import Theme from "../global/Theme.astro";
   <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width" />
-  <title>{title}</title>
+  <title>{fullTitle}</title>
   <CSSReset />
   <Theme />
 </head>

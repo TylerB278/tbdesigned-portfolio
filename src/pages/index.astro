@@ -16,8 +16,8 @@ import ClientList from "@components/ClientList.astro";
 import PersonalWork from "@components/PersonalWork.astro";
 ---
 
-<Layout title="T.B.Designed">
-  <div class="heroSect">
+<Layout title="Portfolio">
+  <div class="heroSect noselect">
     <!-- <h1 class="title th1">Tyler Boggi</h1> -->
      <!-- <video width="1500" height="800" autoplay="autoplay" src="tyHeader.webm" class="timg" /> -->
     <Image src={TyIcon} alt="My Logo" class="headerAnim icon"/>
@@ -447,5 +447,10 @@ nav{
     .arrowR{ right: 0px; }
   }
 
+  .noselect {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  }
 
 </style>
