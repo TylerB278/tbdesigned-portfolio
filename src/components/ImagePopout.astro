@@ -93,7 +93,7 @@ styleAttrs.width = props.w;
     font-size: 1em;
     font-weight: normal;
     font-family: arial;
-    color: #000;
+    color: var(--color-background);
     margin-bottom: 19px;
     line-height: 1.4em;
   }
@@ -106,25 +106,27 @@ styleAttrs.width = props.w;
   }
 
   .glightbox-custom .gslide-video {
-    background: #000;
+    background: var(--color-background);
   }
 
   .glightbox-custom .gprev,
   .glightbox-custom .gnext,
   .glightbox-custom .gclose {
-    background-color: var(--color-focus-ring);
-    border-radius: 0px;
+    background-color: var(--color-background);
+    border-radius: 5px;
+    scale: 105%;
   }
 
   .glightbox-custom .gprev path,
   .glightbox-custom .gnext path,
   .glightbox-custom .gclose path {
-    fill: #fff;
+    fill: var(--color-accent);
+    font-weight: 800;
   }
 
   .glightbox-custom .gprev {
     position: absolute;
-    top: -100%;
+    top: 50%;
     left: 30px;
     width: 40px;
     height: 50px;
@@ -132,7 +134,7 @@ styleAttrs.width = props.w;
 
   .glightbox-custom .gnext {
     position: absolute;
-    top: -100%;
+    top: 50%;
     right: 30px;
     width: 40px;
     height: 50px;
