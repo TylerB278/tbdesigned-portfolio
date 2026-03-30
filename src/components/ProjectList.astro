@@ -3,18 +3,10 @@ import { getImage } from "astro:assets";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
-//I GIVE UP
-//Import Hero Images 
-// import Peter from './astro-logo-light-gradient.png';
-
 const allProjects = await getCollection("projects");
 const sortedProjects = allProjects.sort((a,b)=>{
-  return a.data.order-b.data.order
+  return a.data.order-b.data.order;
 });
-// const processedProjects = allProjects.map(async(project)=>{
-
-//   return {...project,imageSrc: await getImage({src: Peter, format: 'png'}) }
-// })
 
 ---
 
@@ -26,13 +18,6 @@ const sortedProjects = allProjects.sort((a,b)=>{
         <a href={`/projects/${project.id}/`} class="click"></a>
         <div class="projectCard backgroundCard case" id={`${project.data.class}`} style={`background-image: url(${project?.data?.thumbnail?.src})`}></div>
         <div class="bottomCard">
-          {/* <a href={`/projects/${project.id}/`}></a> */}
-            {/* conditional rendering:
-            "if project.data.thumbnail exists, then create this <Image> element"
-            */}
-            {/* {project.data.thumbnail && (
-              <Image class="project-img" src={project.data.thumbnail} alt="" />
-            )} */}
           <h2>{project.data.title}</h2>
           <p>{project.data.projectType}</p>
         </div>
@@ -56,8 +41,6 @@ const sortedProjects = allProjects.sort((a,b)=>{
     background-size: contain;
     align-items: center;
     overflow: visible;
-    /* width: 400px; */
-    /* height: 250px; */
     min-width: 400px;
     min-height: 150px;
     margin: 0px;
@@ -83,20 +66,10 @@ const sortedProjects = allProjects.sort((a,b)=>{
 
   .fullCard:hover .projectCard, .click:hover .projectCard{
     border: 10px solid var(--color-accent);
-    /* background-size: 100%; */
   }
-
-  /* .fullCard:hover .bottomCard, .click:hover .bottomCard{
-    background-color: #fee27150;
-  }
-
-  .fullCard:hover .bottomCard h2, .fullCard:hover .bottomCard p, .click:hover .bottomCard h2, .click:hover .bottomCard p{
-    color: var(--color-text);
-  } */
 
   .fullCard{
     position: relative;
-    /* border: 5px solid white; */
     width: 53vw;
     height: 33vw;
     margin-right: 40vw;
@@ -133,7 +106,6 @@ const sortedProjects = allProjects.sort((a,b)=>{
 
   .bottomCard h2{
     color: var(--color-accent);
-    /* width: 400px; */
     margin-left: 20px;
     margin-bottom: 20px;
     justify-content: flex-start;
@@ -141,24 +113,11 @@ const sortedProjects = allProjects.sort((a,b)=>{
   }
   .bottomCard a{ text-decoration: none; }
   .bottomCard p{
-    /* background-color: rgba(255, 187, 0); */
     color: var(--color-accent);
-    /* width: 400px; */
+    text-align: left;
     padding-left: 20px;
     padding-bottom: 10px;
     margin-top: -20px;
-  }
-
-  @media(max-width: 900px){
-    /*.projectCard{
-      width: 40vw;
-      height: 30vw;
-    }
-    .bottomCard{
-      font-size: 1.5vw;
-      line-height: 3.5vw;
-      width: 40vw;
-    }*/
   }
 
   .backgroundCard{

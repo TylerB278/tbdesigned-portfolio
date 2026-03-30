@@ -25,7 +25,7 @@ import PersonalWork from "@components/PersonalWork.astro";
     <!-- <img src="/tyHeader.webm" class="timg"></img> -->
     <!-- <h2 class="title th2">Graphic Designer</h2> -->
     <a id="seeContent" href="#top">
-      <p>See page content</p>
+      <p>See my work!</p>
       <p style="font-size: 32px; line-height: 0.8;">v</p>
     </a>
   </div>
@@ -107,6 +107,10 @@ import PersonalWork from "@components/PersonalWork.astro";
 </script>
 
 <style>
+
+body{
+  text-align: left;
+}
 
 nav{
   position: fixed;
@@ -339,24 +343,6 @@ nav{
   height: 60px;
 }
 
-/*Scroll Content*/
-
-  .arrowL, .arrowR{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 7vw;
-    height: 40vw;
-    /* background-color: var(--color-accent); */
-    border: 5px solid var(--color-accent);
-    color: var(--color-accent);
-    border-radius: 10px;
-    opacity: 35%;
-    font-size: 10vw;
-    z-index: 0;
-  }
-  
   /* Scroll Content */
   .arrowL, .arrowR{
     position: absolute;
@@ -371,7 +357,7 @@ nav{
     border-radius: 10px;
     opacity: 35%;
     font-size: 10vw;
-    z-index: 0;
+    z-index: 200;
   }
 
   .arrowL{ left: 1.7vw; }

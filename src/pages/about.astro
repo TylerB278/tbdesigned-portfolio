@@ -13,6 +13,7 @@ import TyOld from "@assets/images/oldLogo.png";
 import LogoT from "@assets/images/logoT.png";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
+import ImagePopout from '@components/ImagePopout.astro';
 ---
 
 <Layout title="About">
@@ -82,7 +83,7 @@ import { Image } from "astro:assets";
             and even the animationyou saw on the homepage!
           </p>
         </div>
-        <Image alt="a picture of me" src={LogoT} width="600" style="padding: 20px; "/>
+        <ImagePopout alt="Progression of my logo over 5 years!" image={LogoT} w="600px" galleryID="1" />
       </div>
 
       <!-- <div class="workFor">
