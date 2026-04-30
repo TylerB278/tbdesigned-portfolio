@@ -29,9 +29,10 @@ const sortedProjects = allProjects.sort((a,b)=>{
 <style>
   .projectContain{
     height: 400px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* flex-direction: row;
+    justify-content: space-evenly; */
     scroll-snap-align: start;
 
   }
