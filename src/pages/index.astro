@@ -368,16 +368,18 @@ nav{
   }
 
   #scrollContain{
+    -webkit-overflow-scrolling: touch;
     align-content: flex-start;
     margin-top: 0px;
     padding-left: 40vw;
     margin-bottom: 0px;
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     height: 35vw;
+    width: 100vw;
     /* border: 10px solid var(--color-accent); */
   }
 
