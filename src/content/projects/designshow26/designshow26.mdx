@@ -17,28 +17,144 @@ import Hover from 'hoverExample.png';
 import Logo from 'showLogo.png';
 import Projects from 'homeProjects.png';
 import STD from 'saveDate.png';
+import I1 from 'iteration1.png';
+import I2 from 'iteration2.png';
+import I3 from 'iteration3.png';
+import C1 from 'conceptBlue.png';
+import C2 from 'conceptRed.png';
+import C3 from 'concept3.png';
+import Char from 'charSet.png';
+import LogoT from 'logoTall.webp';
+import LogoL from 'logoLong.webp';
+import LogoS from 'logoSquare.webp';
+import FigmaA from 'figmaAboutPage.png';
+import FigmaD from 'figmaDesignersPage.png';
+import FigmaH from 'figmaHomePage.png';
+import FigmaP from 'figmaPersonPage.png';
+import SD from 'designersScreenshot.png';
+import SP from 'projectsScreenshot.png';
+import SH from 'homepageScreenshot.png';
+import SPer from 'personScreenshot.png';
 
 <Container>
 
 <MultiCol mw="800px">
-  <TextBox w="750px" text="
-    This project is the SUNY New Paltz Design Show 2026!
-    This is currently an in-progress project and if you want to see the show when it happens it will be on May 1st @ SUNY New Paltz, Wooster Hall from 4pm to 7pm.
-    The Design Show 26 is a celebration of all the graduating BFA Graphic Design and MA Digital Design & Fabrication students along with their thesis projects.
-    It will be an open forum where all the seniors get to show their thesis projects.
-    I worked with a team of four other designers to create the branding and everything else needed ranging
-    from catalogs, to social media, to event design.
-    My job outside of all of us working on the branding was to make the website.
-    I use CSS, HTML, and JavaScript to make it along with the tools used to make last year's show.
-    You can see my current in progress work along with the website at the link below!" />
-    <a href="https://npds26.netlify.app/" target="_blank" style="color: var(--color-accent); font-size: 32px; text-decoration: none; " >See In-Progress Website Here</a>
+  <TextBox w="750px" head="What is the Design Show?" text="
+    The 2026 Design Show is the once a year Senior Thesis presentation event celebrating the work of graduating students
+    from the MA in Digital Design & Fabrication and the BFA Graphic Design programs in the Department of Design at SUNY New Paltz.
+    I was hired by the Design Department along with four other designers to make up the team that would formulate all of the
+    branding and organization for the show. The show was held on May 1st, 2026 in SUNY New Paltz's Wooster Hall building."
+    />
 </MultiCol>
-
-<MultiCol mw="1200px">
-    <ImagePopout alt="Test" image={Logo} w="500px" galleryID="1"/>
-    <ImagePopout alt="Test" image={Hover} w="500px" galleryID="1"/>
-    <ImagePopout alt="Test" image={Projects} w="500px" galleryID="1"/>
-    <ImagePopout alt="Test" image={STD} w="450px" galleryID="1"/>
+<MultiCol mw="800px">
+  <TextBox w="750px" text="
+    There were two main parts for the process of this project. The first was what we did together as a group, this mostly covered
+    establishing the initial brand identity and visual style for the show that we would then all use in our own sections.
+    There was some other small aspects as well like the Save the Date promo and event setup that we all collectively helped with.
+    The second part was our individual sections, with so many aspects to this project we needed to divide our roles among the group
+    in order to cover everything needed for the show in one semester. For my section I handled the design, development, deployment and advertising of the show's website.
+    This part of the project was done entirely seperate and on my own with advice given from the rest of the group as it was produced."
+    />   
+</MultiCol>
+<MultiCol mw="800px">
+  <TextBox w="750px" head="Part One: Branding" text='
+    For the first part of the project it was about working with the team in order to create the branding for the show.
+    We started by reviewing the past shows and defining what we liked from them and what we thought needed to change.
+    As a group we wanted to stand out from other years and in order to do that we decided that we would avoid black and white
+    when designing for the show along with coming up with some unique themes to follow. For our themes we followed two main ideas
+    we wanted to base the show around. First was the structural idea of "stacking", this was a concept we all liked as it worked as
+    a good start to how to design for the show while also being able to be reframed as a narrative. An example is the phrase "stack of talent"
+    which was used in our branding to highlight how far the students have come. Second was the idea of "persistence", this was the more
+    abstract, identity-based theme we went with. With the current state of the world at the time we wanted to highlight the struggles that
+    a lot of us were going through and how we were able to persist and create despite that. This showed up in aspects of the design
+    like the rugged textures and constant movement.'
+    />   
+</MultiCol>
+<MultiCol mw="800px">
+  <TextBox w="750px" text='
+    To highlight now the actual iteration process we went through many different forms and variations among the five of us but I
+    can highlight here my contributions to the final design theme. During our first round of iteration I highlighted that it could be
+    good to have a theme to base the design style around to make things more cohesive. During our second round of iterations I
+    mentioned using a grid layout and breaking that grid occasionally which was used more so in the promotional material. During our
+    first round of drafting brand directions I came up with our signature red color as a way to symbolize the chaos and our persistence
+    through it. It also served to differentiate us from past years as most shows went with black and cool colors or with the full rainbow.
+    You can see these initial brand directions I made below.'
+    />   
+</MultiCol>
+<MultiCol mw="1000px">
+    <ImagePopout alt="Test" image={I1} w="300px" galleryID="1"/>
+    <ImagePopout alt="Test" image={I2} w="300px" galleryID="1"/>
+    <ImagePopout alt="Test" image={I3} w="300px" galleryID="1"/>
+</MultiCol>
+<MultiCol mw="800px">
+  <TextBox w="750px" text='
+    From there we decided on a few color palettes that we would each make a brand example of in order to decide which color palette and design looked best.
+    My contribution to the palettes was partially to the blue/yellow one and mainly to the red/purple palette that we would end up using for the show. You
+    can see below the concepts that I made for these two colors palettes.'
+    />   
+</MultiCol>
+<MultiCol mw="1000px">
+    <ImagePopout alt="Test" image={C1} w="450px" galleryID="1"/>
+    <ImagePopout alt="Test" image={C2} w="450px" galleryID="1"/>
+</MultiCol>
+<MultiCol mw="800px">
+  <TextBox w="750px" text='
+    After this phase we brought our designs to faculty and the senior thesis students where we got valuable feedback. We got reaffirmed in the color palette
+    for the project working but decided to go with one of our other ideas on layered typography and blending. From there we each did our own iterations on the idea.
+    What I did during this phase was fix an issue our team was having in having the letters be un-editable and created a fully editable method for the effect that we wanted.
+    This along with expanding the concept brought us here.'
+    />   
+</MultiCol>
+<MultiCol mw="1000px">
+    <ImagePopout alt="Test" image={C3} w="200px" galleryID="1"/>
+    <ImagePopout alt="Test" image={Char} w="200px" galleryID="1"/>
+</MultiCol>
+<MultiCol mw="800px">
+  <TextBox w="750px" text='
+    Through one last long meeting after this we were finally able to come up with our final brand for the show! You can see our logos below,
+    these were stacked in three different ways both to follow our theme and allow up to be more responsive with the logo. The jagged edges and overlapping fonts
+    kept our theme of persistence and it all followed our red/purple color palette.'
+    />   
+</MultiCol>
+<MultiCol mw="800px">
+    <ImagePopout alt="Test" image={LogoT} w="250px" galleryID="1"/>
+    <ImagePopout alt="Test" image={LogoS} w="500px" galleryID="1"/>
+</MultiCol>
+<MultiCol mw="800px">
+    <ImagePopout alt="Test" image={LogoL} w="780px" galleryID="1"/>
+</MultiCol>
+<MultiCol mw="800px">
+  <TextBox w="750px" head="Part Two: Website" text='
+    With the branding done together we split to work on our assigned roles, for me this was creating the design show website! I started by referencing past years and their websites,
+    from here I got a good idea of a layout that would both incorperate what worked from bast years while also standing out from them as we intended. I made a figma prototype to
+    reflect this initial layout idea which you can see below.'
+    />   
+</MultiCol>
+<MultiCol mw="800px">
+    <ImagePopout alt="Test" image={FigmaH} w="350px" galleryID="1"/>
+    <ImagePopout alt="Test" image={FigmaD} w="350px" galleryID="1"/>
+</MultiCol>
+<MultiCol mw="800px">
+    <ImagePopout alt="Test" image={FigmaP} w="350px" galleryID="1"/>
+    <ImagePopout alt="Test" image={FigmaA} w="350px" galleryID="1"/>
+</MultiCol>
+<MultiCol mw="800px">
+  <TextBox w="750px" text='
+    From here I used HTML/CSS with Astro and JavaScript in order to beging developing and designing the final website. I added a few things to the layout like a side nav bar on wider screens
+    for the homepage. I also added an interactive map to the about page to allow people to know where they were going. I added some additional accent colos to the header and text styles with rotation and box outlines to the text headers,
+    all of which were inspired by slight branding changes we made later on in the process for other aspects that the team worked on. One thing that I made that I am especially proud of was the interactive and responsive elements.
+    I have several hover style that make the site come to life, especially the one used in the designers page to highlight the additional silly photos we took of each student and the responsive header
+    using the several variations of the show logo. You can see these highlighted below in the screenshots of the website and if you would like to visit the site you can click the link below or go to 2026show.newpaltz.design'
+    />   
+        <a href="https://2026show.newpaltz.design/" target="_blank" style="color: var(--color-accent); font-size: 32px; text-decoration: none; " >See Website Here!</a>
+</MultiCol>
+<MultiCol mw="1000px">
+    <ImagePopout alt="Test" image={SH} w="450px" galleryID="1"/>
+    <ImagePopout alt="Test" image={SPer} w="450px" galleryID="1"/>
+</MultiCol>
+<MultiCol mw="1000px">
+    <ImagePopout alt="Test" image={SP} w="450px" galleryID="1"/>
+    <ImagePopout alt="Test" image={SD} w="450px" galleryID="1"/>
 </MultiCol>
 
 </Container>
