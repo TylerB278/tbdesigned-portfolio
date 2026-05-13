@@ -59,6 +59,7 @@ import NPEALogoOld from 'npea-old-Logo.png';
 import NPEALongLogo from 'npea-longlogo.png';
 import PechakuchaShow from 'PechakuchaShow.JPG';
 import PechakuchaHeader from 'pechakuchaHeader.png';
+import PechakuchaAudience from 'pechakuchaAudience.png';
 import IexY from 'IexampleColor.png';
 import IexB from 'IexampleBlack.png';
 import Iicon from 'illustrate-icon.png';
@@ -72,12 +73,16 @@ import HulkRender from 'hulk-render.webp';
 import webIt from 'webIteration1.png';
 import webLayout from 'webLayout.png';
 import webScroll from 'webScrollbar.png';
+import OldFigSite from 'oldFigSite.png';
+import OldFigCase from 'oldFigCase.png';
+import FigScroll from 'figScroll.png';
 import webAboutPage from 'aboutPage.png';
 import webHomePage from 'homepage.png';
 import webEventPage from 'eventPage.png';
 import webCasePage from 'casePage.png';
 import showPoster from 'showPoster.JPG';
 import showSwag from 'showSwag.JPG';
+import ProcessBook from 'processBook.pdf';
 
 <Container>
 
@@ -147,8 +152,9 @@ import showSwag from 'showSwag.JPG';
     order to showcase what Esports design has to offer. It was also a big turning point in getting me more comfortable openly and confidently discussing my thesis. In terms of visual style
     I developed the use of purple as a good background color and was the first use of the sketchy & detailed background texture.
     '/>
-  <ImagePopout alt="Presentation of my thesis concept at the PechaKucha show" image={PechakuchaShow} w="600px" galleryID="1"/>
-  <ImagePopout alt="Header for my PechaKucha presentation" image={PechakuchaHeader} w="600px" galleryID="1"/>
+  <ImagePopout alt="Presentation of my thesis concept at the PechaKucha show" image={PechakuchaShow} w="700px" galleryID="1"/>
+  <ImagePopout alt="Header for my PechaKucha presentation" image={PechakuchaHeader} w="700px" galleryID="1"/>
+  <ImagePopout alt="Audience slide for my PechaKucha presentation" image={PechakuchaAudience} w="700px" galleryID="1"/>
 
 </MultiCol>
 
@@ -317,12 +323,14 @@ import showSwag from 'showSwag.JPG';
     Here is the in-progress iterations for the website as done in Figma
     '/>
 
-  <ImagePopout alt="Test" image={webIt} w="300px" galleryID="1"/>
-  <ImagePopout alt="Test" image={webLayout} w="300px" galleryID="1"/>
-  <ImagePopout alt="Test" image={webScroll} w="300px" galleryID="1"/>
-  <ImagePopout alt="Test" image={Thumb} w="300px" galleryID="1"/>
-  <ImagePopout alt="Test" image={Thumb} w="300px" galleryID="1"/>
-  <ImagePopout alt="Test" image={Thumb} w="300px" galleryID="1"/>
+  <ImagePopout alt="Test" image={OldFigCase} w="270px" galleryID="1"/>
+  <ImagePopout alt="Test" image={OldFigSite} w="380px" galleryID="1"/>
+  <ImagePopout alt="Test" image={webIt} w="350px" galleryID="1"/>
+  <ImagePopout alt="Test" image={FigScroll} w="300px" galleryID="1"/>
+  <ImagePopout alt="Test" image={webLayout} w="700px" galleryID="1"/>
+  <ImagePopout alt="Test" image={webScroll} w="700px" galleryID="1"/>
+  
+
 
   <TextBox w="750px" text='
     And heres how it turned out in the final outcome! You can visit the site with the link below.
@@ -372,7 +380,12 @@ import showSwag from 'showSwag.JPG';
     sure to check out the process book below or visit the project website!
     '/>
 
-  <ImagePopout alt="Test" image={Thumb} w="600px" galleryID="1"/>
+  <embed 
+    src={ProcessBook} 
+    type="application/pdf" 
+    width="100%" 
+    height="700px" 
+  />
 
 </MultiCol>
 
