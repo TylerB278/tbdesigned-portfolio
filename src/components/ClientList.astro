@@ -12,7 +12,7 @@ const sortedProjects = allProjects.sort((a,b) => {
 <div class="cardsLayout">
   {
     sortedProjects.map((project) => (
-      <div class="projectCardWrap">
+      <div class={`projectCardWrap ${project.data.class}`}>
         <a href={`/clients/${project.id}/`} class="click"></a>
         <div class={`projectCard backgroundCard`} style={`background-image: url(${project?.data?.thumbnail?.src})`}></div>
         <div class="cardOverlay"></div>  
