@@ -1,0 +1,111 @@
+---
+title: Aether Shirt Campaign
+projectType: Social Media & E-Commerce
+class: rivals social
+thumbnail: thumbnail.png
+order: 20
+---
+
+{/* using components in an MDX file */}
+import Container from '@components/Container.astro';
+import ImageComponent from '@components/ImageComponent.astro';
+import ImagePopout from '@components/ImagePopout.astro';
+import TextBox from '@components/TextBox.astro';
+import MultiCol from '@components/MultiCol.astro';
+import thumb from 'thumbnail.png';
+import process from 'etsyProcess.gif';
+import blender from 'blenderScene.png';
+import backs from 'shirtBacks.png';
+import fronts from 'shirtFronts.png';
+import absa from 'absaDesign.png';
+import clairen from 'clairenDesign.png';
+import orcane from 'orcaneDesign.png';
+import kragg from 'kraggDesign.png';
+import fleet from 'fleetDesign.png';
+import etalus from 'etalusDesign.png';
+import lareina from 'lareinaDesign.png';
+
+<Container>
+
+<MultiCol mw="1200px">
+    <TextBox w="800px" text="Taking my experience designing for niche indie video game Rivals of Aether 2, I took it upon myself to create designs for t-shirts of the 
+    individual characters of that games franchise. These shirts were sold publically by me on Etsy along with social media marketing on my socials accounts. 
+    These shirts hit an initial burst of $700 revenue and climbing with only half of this cast of characters as I actively update and post about the shop to increase 
+    its traction over time." />
+</MultiCol>
+
+<br />
+
+<MultiCol mw="1200px">
+    <TextBox w="800px" text="These designs are made to depict characters from the Rivals of Aether 2 video game. It is a competitive game enjoyed by many and as such
+    people tend to get invested or connected to the character they play. These shirts aimed to capitalize on that by creating depictions of each character that stand out
+    as something cool to showcase your enjoyment of the game or character. These were designs solely posed, rendered and composited by myself using the official models 
+    of the in-game characters. I used a production company called Tapstich to mass produce these shirts for automatic and widespread sale." head = "What are they?"/>
+</MultiCol>
+
+<MultiCol mw="1200px">
+    <TextBox w="800px" text="The production of these designs is mostly completed using Blender 3D. First I import the models from the game and focus on the posing of
+    the character. It is important to get everything anatomically correct while still producing a dynamic and striking pose that would look good in motion. After the completion
+    of the posing I move to the lighting. Utilizing a combination of Blender's light objects as well a unique shader node setup to simulate the rim lights I can create a style for the
+    lighting that stands out even from the game itself to create something even more dynamic. From there I render out the image and bring it into Photoshop. From here I add any color grading modifiers 
+    and slight composition touchups to the render. On top of this I add a grunge texture to more closely match the style of the shirt it's being produced on. And lastly I add the typography to 
+    the background to complete the design. You can see below the different stages of the design along with my Blender 3D setup." head = "How are the Designs Made?"/>
+    <ImagePopout alt="Process for creation of shirt graphics" image={process} galleryID="1" w="500px"/>
+    <ImagePopout alt="Blender node setup and scene for shirt graphics" image={blender} galleryID="1" w="500px"/>
+</MultiCol>
+
+<MultiCol mw="1200px">
+    <TextBox w="800px" text="The designs are then sent off to the production company to produce two versions. The first is the main intended shirt the design was made for, the oversized snow-washed cotton shirt.
+    Additionally I added a basic cotton t-shirt as a cheaper and more standard option for people not looking for the initial one. You can see these shirts below."/>
+    <ImagePopout alt="Image of the front design for the shirts" image={fronts} galleryID="2" w="500px"/>
+    <ImagePopout alt="Image of the back designs for the shirts" image={backs} galleryID="2" w="500px"/>
+</MultiCol>
+
+<MultiCol>
+    <TextBox w="800px" text="In order to sell these shirts they needed to be advertised. I posted promotions for them on my social media accounts to showcase the shirts and encourage
+    people to by them. I used the production company's supplied renders of the designs on the shirts to more accurately portray the product. You can see below each of the designs I made
+    as they appear on the shop." head = "Promotion & Individual Designs"/>
+</MultiCol>
+
+<MultiCol>
+    <TextBox w="500px" text="" head = "Absa"/>
+    <ImagePopout alt="Graphic for the Absa character T-shirt" image={absa} galleryID="3" w="300px"/>
+</MultiCol>
+
+<MultiCol>
+    <TextBox w="500px" text="" head = "Clairen"/>
+    <ImagePopout alt="Graphic for the Clairen character T-shirt" image={clairen} galleryID="3" w="300px"/>
+</MultiCol>
+
+<MultiCol>
+    <TextBox w="500px" text="" head = "Orcane"/>
+    <ImagePopout alt="Graphic for the Orcane character T-shirt" image={orcane} galleryID="3" w="300px"/>
+</MultiCol>
+
+<MultiCol>
+    <TextBox w="500px" text="" head = "Kragg"/>
+    <ImagePopout alt="Graphic for the Kragg character T-shirt" image={kragg} galleryID="3" w="300px"/>
+</MultiCol>
+
+<MultiCol>
+    <TextBox w="500px" text="" head = "Fleet"/>
+    <ImagePopout alt="Graphic for the Fleet character T-shirt" image={fleet} galleryID="3" w="300px"/>
+</MultiCol>
+
+<MultiCol>
+    <TextBox w="500px" text="" head = "Etalus"/>
+    <ImagePopout alt="Graphic for the Etalus character T-shirt" image={etalus} galleryID="3" w="300px"/>
+</MultiCol>
+
+<MultiCol>
+    <TextBox w="500px" text="" head = "La Reina"/>
+    <ImagePopout alt="Graphic for the La Reina character T-shirt" image={lareina} galleryID="3" w="300px"/>
+</MultiCol>
+
+<MultiCol>
+    <TextBox w="800px" text="I continue to update this shop with new shirts over time and took this account from nothing to a growing client-base in a niche market. 
+    This shop in it's debut month made approximately 20% more sales than the average Etsy shop in its first month. As it continues to grow, I learn more ane more 
+    about e-commerce markets and how to propperly establish advertising campaigns for a growing business." />
+</MultiCol>
+
+</Container>
