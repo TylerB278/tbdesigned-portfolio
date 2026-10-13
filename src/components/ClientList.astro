@@ -15,7 +15,7 @@ const sortedProjects = allProjects.sort((a,b) => {
       <div class={`projectCardWrap ${project.data.class}`}>
         <a href={`/clients/${project.id}/`} class="click"></a>
         <div class={`projectCard backgroundCard`} style={`background-image: url(${project?.data?.thumbnail?.src})`}></div>
-        <div class="cardOverlay"></div>  
+        <div class="cardOverlay" style={`background-image: url(${project?.data?.thumbnail?.src})`}></div>  
         <div class="bottomCard">
           <a href={`/clients/${project.id}/`}>
             <h2>{project.data.title}</h2>
@@ -30,18 +30,24 @@ const sortedProjects = allProjects.sort((a,b) => {
 <style>
   .projectCard{
     position: relative;
+    left: 0px;
+    top: 0px;
     display: flex;
     flex-flow: wrap;
     justify-content: flex-start;
     align-items: center;
     overflow: visible;
-    width: 500px;
-    height: 300px;
+    /* width: 500px;
+    height: 300px; */
+    width: 40vw;
+    height: 24vw;
+    min-width: 500px;
+    min-height: 300px;
     margin: 10px;
     margin-bottom: 0px;
     background-color: var(--color-accent);
     border: 0px solid var(--color-accent);
-    transition: all 0.2s;
+    transition: all 0.3s;
   }
 
 
@@ -54,8 +60,10 @@ const sortedProjects = allProjects.sort((a,b) => {
     position: absolute;
     background-color: var(--color-accent);
     top: 0px;
-    width: 450px;
-    height: 300px;
+    width: 38vw;
+    height: 24vw;
+    min-width: 450px;
+    min-height: 300px;
     left: 10px;
     top: 10px;
     transition: all 0.2s;
@@ -66,12 +74,15 @@ const sortedProjects = allProjects.sort((a,b) => {
     scale: 110%;
     left: 30px;
     top: 0px;
-    rotate: 3deg;
+    rotate: 2deg;
   }  
   .projectCardWrap:hover .projectCard,   .projectCardWrap:focus-within .projectCard{
     border: 10px solid var(--color-accent);
+    scale: 60%;
+    left: -130px;
+    top: -100px;
     background-size: 105.5%;
-    rotate: -5deg;
+    rotate: -3deg;
   }  
 
   .cardsLayout{
@@ -79,7 +90,7 @@ const sortedProjects = allProjects.sort((a,b) => {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 30px;
-    max-width: 1600px;
+    /* max-width: 1600px; */
     margin: 0 auto;
   }
 
@@ -132,10 +143,14 @@ const sortedProjects = allProjects.sort((a,b) => {
     .projectCard{
       width: 333.33px;
       height: 200px;
+      min-width: 0px;
+      min-height: 0px;
     }
     .cardOverlay{
-    width: 280px;
-    height: 200px;
+      width: 280px;
+      height: 200px;
+      min-width: 0px;
+      min-height: 0px;
     }
     .bottomCard h2{
       font-size: 22px;
