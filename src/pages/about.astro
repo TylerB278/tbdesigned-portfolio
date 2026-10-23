@@ -3,6 +3,8 @@ import Container from "@components/Container.astro";
 import Layout from "@layouts/Layout.astro";
 import TyLogo from "@assets/images/experienceIMG.JPG";
 import TyNorm from "@assets/images/tyNorm-bg.png";
+import TyRoom from "@assets/images/roomPhoto.jpg";
+import BobRoss from "@assets/images/bobRoss.jpg";
 import TyHeader from "@assets/images/tyHeader.gif";
 import TyDraw from "@assets/images/tyLogo.png";
 import AWC from "@assets/images/AWClogoBW.png";
@@ -25,26 +27,71 @@ import ImagePopout from '@components/ImagePopout.astro';
     </div>
   </nav>
     <Container>
-      <h1>About Me</h1>
+      
 
       <div class="about">
         <div class="aText">
-          <h2>About Me!</h2>
+          <h1>About Me</h1>
+          <!-- <h2>About Me!</h2> -->
+          <p style="font-weight: 800;">
+            Hi! I'm Tyler, a graphic designer based in New York
+          </p>
           <p>
-            Hi! my name is Tyler Boggi, I am a graphic designer specializing in branding and web design/development!
+            I graduated from SUNY New Paltz with a Bachelors of Fine Arts in Graphic Design on May 2026.
+            My passion for creating comes from the desire to make designs that persuade.
+            I love to make works that grab viewers visually and get them to truly consider what is being offered or
+            shown to them. I strive to make works that look stunning while not sacrificing on their purpose.
+          </p>
+          <p style="font-weight: 800;">
+            *cool sentence here*
+          </p>
+          <p>
+            I graduated from SUNY New Paltz with a Bachelors of Fine Arts in Graphic Design on May 2026.
+            My passion for creating comes from the desire to make designs that persuade.
+            I love to make works that grab viewers visually and get them to truly consider what is being offered or
+            show
+          </p>
+        </div>
+        <Image alt="a picture of me" src={TyNorm} class="aImg"/>
+      </div>
+
+      <div class="about">
+        <div class="aText">
+          <!-- <h2>About Me!</h2> -->
+          <p style="font-weight: 800;">
+            In my free time I...
+          </p>
+          <p>
             I graduated from SUNY New Paltz with a Bachelors of Fine Arts in Graphic Design on May 2026.
             My passion for creating comes from the desire to make designs that persuade.
             I love to make works that grab viewers visually and get them to truly consider what is being offered or
             shown to them. I strive to make works that look stunning while not sacrificing on their purpose.
           </p>
         </div>
-        <Image alt="a picture of me" src={TyNorm} class="aImg"/>
+        <div class="aText">
+          <!-- <h2>About Me!</h2> -->
+          <p style="font-weight: 800;">
+            Some fun facts about me:
+          </p>
+          <p>
+            I graduated from SUNY New Paltz with a Bachelors of Fine Arts in Graphic Design on May 2026.
+            My passion for creating comes from the desire to make designs that persuade.
+            I love to make works that grab viewers visually and get them to truly consider what is being offered or
+            shown to them. I strive to make works that look stunning while not sacrificing on their purpose.
+          </p>
+        </div>
       </div>
 
-      <div class="about2">
-        <Image alt="a picture of me" src={TyLogo} class="aImg"/>
+      <div class="about">
+        <Image alt="photography of me holding a bob ross souvenier" src={BobRoss} class="aImgBig"/>
+      </div>
+      
+      <h2>My Approach</h2>
+
+      <div class="about">
+        <Image alt="a picture of me" src={TyRoom} class="aImg"/>
         <div class="aText">
-          <h2>My Experience</h2>
+          <p style = "font-weight: 800;">How I view design</p>
           <p>
             I have years of experience working anywhere from one-on-one client work to a large team of fellow designers!
             My work includes branding, website design, designs for physical production, social media,
@@ -52,7 +99,6 @@ import ImagePopout from '@components/ImagePopout.astro';
             in the Esports space and have worked on getting many brands to reach larger audiences.
             I'm open to collaborating with a team any size and ready to give you or your business a brand new look!
             If you'd like to <strong>work with me</strong> or just get in touch then head to my...</p>
-          <a href="/contact">Contact Page!</a>
         </div>
       </div>
 
@@ -63,11 +109,9 @@ import ImagePopout from '@components/ImagePopout.astro';
         <Image alt="a picture of me" src={Red} width="300" class="wImg"/>
       </div> -->
 
-      <div class="about3">
+      <div class="about">
         <div class="aText">
-          <h2>My Branding & Website</h2>
-          <p style="margin-bottom: 20px;">
-            How did I make my branding and this portfolio?</p>
+          <p style = "font-weight: 800;">The making of my Branding & Website</p>
           <p style="margin-bottom: 20px;">
             For the website I built it using HTML & CSS coding from the ground up. I used Javascript to implement
             all of the interaction and more in depth animation like the nav bar and project carousel.
@@ -76,15 +120,22 @@ import ImagePopout from '@components/ImagePopout.astro';
           </p>
           <p>
             For my personal branding I've always been iterating and changing it as my own cartoony drawing style
-            and my physical appearance changed with time. You can see this progression below.
+            and my physical appearance changed with time.
           </p>
           <p>
-            Along with this I made black and white variations, guidelines for my brand,
-            and even the animation you saw on the homepage!
+            Along with this I made black and white variations, guidelines for my brand, even the animation on the homepage!
           </p>
         </div>
         <ImagePopout alt="Progression of my logo over 5 years!" image={LogoT} w="600px" galleryID="1" />
       </div>
+
+      <div class="aboutContact">
+        <div class="aText">
+          <p>If you like my work or just want to chat...</p>
+        </div>
+        <a href="/contact">Get in Touch!</a>
+      </div>
+      
 
       <!-- <div class="workFor">
         <Image alt="a picture of me" src={LogoT} width="900" style="padding: 20px; "/>
@@ -145,6 +196,11 @@ import ImagePopout from '@components/ImagePopout.astro';
     color: var(--color-text);
   }
 
+  h2{
+    font-size: 42pt; 
+    margin: 10px;
+  }
+
   .subHead{
     display: flex;
     justify-content: center;
@@ -180,41 +236,52 @@ import ImagePopout from '@components/ImagePopout.astro';
 
   .about{
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-bottom: 80px;
-  height: 650px;
-  background-color: var(--color-accent);
+  margin-bottom: 50px;
+  /* height: 700px; */
+  height: fit-content;
   padding: 20px;
   margin-top: 0px;
   }
-  .about3{
+
+  .aboutContact{
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 20px;
   margin-bottom: 80px;
   height: fit-content;
-  background-color: var(--color-accent);
   padding: 40px;
   margin-top: 80px;
   }
-  .about p {color: var(--color-background); margin-bottom: 40px;} .about h2{margin-bottom: 10px; color: var(--color-background); justify-content: flex-start; }
+  .about p {color: var(--color-text); margin-bottom: 40px;} .about h2{margin-bottom: 10px; color: var(--color-text); justify-content: flex-start; }
   .about3 p {color: var(--color-background); margin-bottom: 40px; text-align: left; } .about3 h2{margin-bottom: 10px; color: var(--color-background); justify-content: flex-start; font-size: 26px; }
 
   .aText{
     justify-content: center;
     align-content: center;
-    max-width: 580px;
+    width: 500px;
+    flex-shrink: 0;
+    color: var(--color-text);
   }
 
-  .aText a{padding: 20px; color: var(--color-background); background-color: var(--color-accent); text-decoration: none; font-weight: 600; font-size: 26px;}
-  .aText a:hover{padding: 20px; background-color: var(--color-background); color: var(--color-accent);}
+  .aboutContact a{padding: 20px; color: var(--color-background); background-color: var(--color-accent); text-decoration: none; font-weight: 800; font-size: 42px;}
+  .aboutContact a:hover{padding: 20px; background-color: var(--color-background); color: var(--color-accent);}
 
   .aImg{
-    width: 350px;
+    width: 60%;
+    max-width: 500px;
+    flex-shrink: 1;
+  }
+  
+  .aImgBig{
+    width: 60%;
+    flex-shrink: 1;
   }
   
   .wImg{
