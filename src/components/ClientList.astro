@@ -15,7 +15,7 @@ const sortedProjects = allProjects.sort((a,b) => {
       <div class={`projectCardWrap ${project.data.class}`}>
         <a href={`/clients/${project.id}/`} class="click"></a>
         <div class={`projectCard backgroundCard`} style={`background-image: url(${project?.data?.thumbnail?.src})`}></div>
-        <div class="cardOverlay" style={`background-image: url(${project?.data?.thumbnail?.src})`}></div>  
+        <div class="cardOverlay" style={`background-image: url(${project?.data?.thumb2?.src})`}></div>  
         <div class="bottomCard">
           <a href={`/clients/${project.id}/`}>
             <h2>{project.data.title}</h2>
@@ -59,6 +59,8 @@ const sortedProjects = allProjects.sort((a,b) => {
   .cardOverlay{
     position: absolute;
     background-color: var(--color-accent);
+    background-position: center;
+    background-size: cover;
     top: 0px;
     width: 38vw;
     height: 24vw;
