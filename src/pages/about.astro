@@ -15,6 +15,10 @@ import TyOld from "@assets/images/oldLogo.png";
 import LogoT from "@assets/images/logoT.png";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
+import DiscordY from "@assets/images/discord_Y.png";
+import LinkedInY from "@assets/images/linkedIn_Y.png";
+import GmailY from "@assets/images/gmail-Y.png";
+import ImageComponent from "@components/ImageComponent.astro";
 import ImagePopout from '@components/ImagePopout.astro';
 ---
 
@@ -37,27 +41,29 @@ import ImagePopout from '@components/ImagePopout.astro';
             Hi! I'm Tyler, a graphic designer based in New York
           </p>
           <p>
-            I graduated from SUNY New Paltz with a Bachelors of Fine Arts in Graphic Design on May 2026.
-            My passion for creating comes from the desire to make designs that persuade.
-            I love to make works that grab viewers visually and get them to truly consider what is being offered or
-            shown to them. I strive to make works that look stunning while not sacrificing on their purpose.
+            I graduated from SUNY New Paltz with a BFA in Graphic Design on May 2026.
+            Since then I have been constantly striving to use my designs to make an impact
+            wherever I can whether that be for individual clients or larger organizations.
+            The most important thing to me though, is constantly improving and learning!
+            As much as I value my current experience,
           </p>
           <p style="font-weight: 800;">
-            *cool sentence here*
+            I know there is always more to learn and grow in this field.
           </p>
           <p>
-            I graduated from SUNY New Paltz with a Bachelors of Fine Arts in Graphic Design on May 2026.
-            My passion for creating comes from the desire to make designs that persuade.
-            I love to make works that grab viewers visually and get them to truly consider what is being offered or
-            show
+            I've done so much varied work in design from Web Design to Motion Design to E-Commerce
+            and so much more yet I aim to keep expanding this skillset with every new client. I bring
+            passion and life to every project I do because design is what I love. If you would like to be
+            a part of my journey to be the best designer I can be, then I'd love to be a part of your own
+            journey by contributing any way I can!
           </p>
         </div>
         <Image alt="a picture of me" src={TyNorm} class="aImg"/>
       </div>
 
       <div class="about">
-        <div class="aText">
-          <!-- <h2>About Me!</h2> -->
+        <!-- <div class="aText">
+          <h2>About Me!</h2>
           <p style="font-weight: 800;">
             In my free time I...
           </p>
@@ -67,64 +73,57 @@ import ImagePopout from '@components/ImagePopout.astro';
             I love to make works that grab viewers visually and get them to truly consider what is being offered or
             shown to them. I strive to make works that look stunning while not sacrificing on their purpose.
           </p>
-        </div>
+        </div> -->
         <div class="aText">
           <!-- <h2>About Me!</h2> -->
           <p style="font-weight: 800;">
             Some fun facts about me:
           </p>
-          <p>
-            I graduated from SUNY New Paltz with a Bachelors of Fine Arts in Graphic Design on May 2026.
-            My passion for creating comes from the desire to make designs that persuade.
-            I love to make works that grab viewers visually and get them to truly consider what is being offered or
-            shown to them. I strive to make works that look stunning while not sacrificing on their purpose.
-          </p>
+          <ul>
+            <li>I used to bowl competitively. If you see the "278" in some of my online handles, thats my high game!</li>
+          </br>
+            <li>I'm an avid video game lover, having played everything from old to new since I was a child. I even play certain games competitively through tounaments and circuits like SUNY League, where I hold the title for the 2026 Super Smash Brothers Ultimate League Champion</li>
+          </br>
+            <li>I used to and still occasionally practive Tai Chi, Yang 24 specifically. As something I did when I was young with members of my family, it is impartant to me.</li>
+          </ul>
         </div>
       </div>
 
       <div class="about">
         <Image alt="photography of me holding a bob ross souvenier" src={BobRoss} class="aImgBig"/>
-      </div>
-      
-      <h2>My Approach</h2>
+      </div> 
 
       <div class="about">
         <Image alt="a picture of me" src={TyRoom} class="aImg"/>
         <div class="aText">
-          <p style = "font-weight: 800;">How I view design</p>
+          <p style = "font-weight: 800;">My approach & how I view design</p>
           <p>
             I have years of experience working anywhere from one-on-one client work to a large team of fellow designers!
             My work includes branding, website design, designs for physical production, social media,
-            and much more, all done for different business in accordance with their goals. I have years of experienceing working with small media-focused creators or organizations notably
-            in the Esports space and have worked on getting many brands to reach larger audiences.
-            I'm open to collaborating with a team any size and ready to give you or your business a brand new look!
-            If you'd like to <strong>work with me</strong> or just get in touch then head to my...</p>
+            and much more. I bring to the table the tools to bring out the goals of clents. What is most important to me 
+            is understanding each and everyone's mission and goal with what they want me to make.
+            Hearing the passion of others brings out the passion in me to see their dreams to reality.
+            I design because I believe I can bring real and impactful change to the world in a beautiful way through designing,
+            and I will continue to persue this dream no matter what.
+            
         </div>
       </div>
-
-      <!-- <div class="workFor">
-        <Image alt="a picture of me" src={AWC} width="300" class="wImg"/>
-        <Image alt="a picture of me" src={CHV} width="300" class="wImg"/>
-        <Image alt="a picture of me" src={NewPaltz} width="300" class="wImg"/>
-        <Image alt="a picture of me" src={Red} width="300" class="wImg"/>
-      </div> -->
 
       <div class="about">
         <div class="aText">
           <p style = "font-weight: 800;">The making of my Branding & Website</p>
           <p style="margin-bottom: 20px;">
-            For the website I built it using HTML & CSS coding from the ground up. I used Javascript to implement
-            all of the interaction and more in depth animation like the nav bar and project carousel.
+            I built this website using HTML & CSS coding from the ground up. I used Javascript to implement
+            all of the interaction and more in depth animation like the nav bar.
             All of this was done with Astro and their content collection framework in order to put it all together
             into a functioning website. It was then deployed using Netlify DNS hosting using Prokbun for the domain.
           </p>
           <p>
-            For my personal branding I've always been iterating and changing it as my own cartoony drawing style
-            and my physical appearance changed with time.
+            For my personal branding I've always been iterating and changing it as my own drawing style
+            and physical appearance changed with time. You can see where I've ended up now with a bold and bright logo looking towards the future.
+            Along with this I made guidelines for my brand and the animation on the homepage!
           </p>
-          <p>
-            Along with this I made black and white variations, guidelines for my brand, even the animation on the homepage!
-          </p>
+            
         </div>
         <ImagePopout alt="Progression of my logo over 5 years!" image={LogoT} w="600px" galleryID="1" />
       </div>
@@ -133,7 +132,12 @@ import ImagePopout from '@components/ImagePopout.astro';
         <div class="aText">
           <p>If you like my work or just want to chat...</p>
         </div>
-        <a href="/contact">Get in Touch!</a>
+        <a href="/contact" class="cLink">Get in Touch!</a>
+        <div class="contact-links">
+          <a href="mailto:tylerboggi.work@gmail.com" target="_blank" class="link"><ImageComponent image={GmailY} alt="Instagram contact" w="200px"/></a>
+          <a href="https://discord.com/users/958813877934649354" target="_blank" class="link"><ImageComponent image={DiscordY} alt="Discord contact" w="200px"/></a>
+          <a href="https://www.linkedin.com/in/tyler-boggi-8192202a8/" target="_blank" class="link"><ImageComponent image={LinkedInY} alt="LinkedIn contact" w="200px"/></a>
+        </div>
       </div>
       
 
@@ -257,7 +261,7 @@ import ImagePopout from '@components/ImagePopout.astro';
   margin-bottom: 80px;
   height: fit-content;
   padding: 40px;
-  margin-top: 80px;
+  margin-top: 50px;
   }
   .about p {color: var(--color-text); margin-bottom: 40px;} .about h2{margin-bottom: 10px; color: var(--color-text); justify-content: flex-start; }
   .about3 p {color: var(--color-background); margin-bottom: 40px; text-align: left; } .about3 h2{margin-bottom: 10px; color: var(--color-background); justify-content: flex-start; font-size: 26px; }
@@ -265,13 +269,13 @@ import ImagePopout from '@components/ImagePopout.astro';
   .aText{
     justify-content: center;
     align-content: center;
-    width: 500px;
-    flex-shrink: 0;
+    max-width: 500px;
+    font-size: 12pt;
     color: var(--color-text);
   }
 
-  .aboutContact a{padding: 20px; color: var(--color-background); background-color: var(--color-accent); text-decoration: none; font-weight: 800; font-size: 42px;}
-  .aboutContact a:hover{padding: 20px; background-color: var(--color-background); color: var(--color-accent);}
+  .cLink{padding: 20px; color: var(--color-background); background-color: var(--color-accent); text-decoration: none; font-weight: 800; font-size: 48px;}
+  .cLink:hover{padding: 20px; background-color: var(--color-background); color: var(--color-accent);}
 
   .aImg{
     width: 60%;
@@ -312,14 +316,28 @@ import ImagePopout from '@components/ImagePopout.astro';
   margin-top: 0px;
   } .about2 p {color: var(--color-background); margin-bottom: 40px;} .about2 h2{margin-bottom: 10px; color: var(--color-background); justify-content: flex-start; }
 
-  .workFor{
+  /* .workFor{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
     margin-bottom: 80px;
     padding-bottom: 10px;
+  } */
+
+  .contact-links{   
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 400px;
+    gap: 10px;
   }
+
+  .link{
+    border: 0px solid var(--color-accent);
+    transition: all 0.3s;
+    max-width: 80px;
+    height: fit-content;
+  } .link:hover{ transform: scale(105%); }
 
   @media (max-width: 800px) {
     nav{
@@ -334,8 +352,8 @@ import ImagePopout from '@components/ImagePopout.astro';
     .about{
       flex-flow: column-reverse wrap;
       height: fit-content;
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding-top: 0px;
+      padding-bottom: 0px;
     }
     .about2{
       flex-flow: column wrap;
@@ -350,6 +368,21 @@ import ImagePopout from '@components/ImagePopout.astro';
     }
     .wImg{
       max-width: 170px;
+    }
+    .aImg{
+      width: 100%;
+      max-width: 700px;
+      flex-shrink: 1;
+    }
+    .aImgBig{
+      width: 100%;
+      flex-shrink: 1;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .aText{
+      font-size: 10pt;
     }
   }
 </style>
