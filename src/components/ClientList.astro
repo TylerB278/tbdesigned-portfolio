@@ -72,20 +72,24 @@ const sortedProjects = allProjects.sort((a,b) => {
     z-index: -1;
   }
 
-  .projectCardWrap:hover .cardOverlay,   .projectCardWrap:focus-within .cardOverlay{
-    scale: 110%;
-    left: 30px;
-    top: 0px;
-    rotate: 2deg;
-  }  
-  .projectCardWrap:hover .projectCard,   .projectCardWrap:focus-within .projectCard{
-    border: 10px solid var(--color-accent);
-    scale: 60%;
-    left: -130px;
-    top: -100px;
-    background-size: 105.5%;
-    rotate: -3deg;
-  }  
+  @media screen and (min-width: 531px){
+
+    .projectCardWrap:hover .cardOverlay,   .projectCardWrap:focus-within .cardOverlay{
+      scale: 110%;
+      left: 30px;
+      top: 0px;
+      rotate: 2deg;
+    }  
+    .projectCardWrap:hover .projectCard,   .projectCardWrap:focus-within .projectCard{
+      border: 10px solid var(--color-accent);
+      scale: 60%;
+      left: -130px;
+      top: -100px;
+      background-size: 105.5%;
+      rotate: -3deg;
+    }  
+
+  }
 
   .cardsLayout{
     display: flex;
